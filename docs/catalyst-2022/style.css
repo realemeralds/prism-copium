@@ -4,16 +4,16 @@
 
 @font-face {
     font-family: 'adelica brush';
-    src: url('Adelica Brush.ttf')
+    src: url('Adelica Brush.ttf');
 }
 /* NAVBAR ELEMENTS */
 .navbar-brand, .nav-link{
-    color: white;
+    color: white !important;
     font-family: adelica brush;
 }
 
 .nav-link {
-    margin: 0px 10px
+    margin: 0px 2.5%;
 }
 
 .register {
