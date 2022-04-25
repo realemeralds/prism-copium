@@ -1,9 +1,38 @@
+/* Again, only touch stuff that is under your section to avoid conflicts later... */
+
+
+
+/* Global font - DO NOT */
+
 @font-face {
     font-family: 'adelica brush';
     src: url('Adelica Brush.ttf')
 }
+/* NAVBAR ELEMENTS */
 
-.bg-image {
-    background-repeat: no-repeat;
-    background-size: 1920px 1080px;
+.title-card {
+    background-color: #;
+    min-height: 88px;
+}
+
+.title-card-heading {
+    color: #FFFFFF;
+    font-family: adelica brush;
+    font-size: 40px;
+    text-decoration: none;
+}
+
+.nav-1 {
+    background-color: 
+}
+
+
+/* SECTION 1 ELEMENTS */
+.welcome {
+    margin-left: 7vw
+}
+
+.hero .container-fluid {
+    padding-left: 7vw;
+    padding-right: 5vw;
 }
