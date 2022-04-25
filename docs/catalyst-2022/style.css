@@ -6,7 +6,7 @@
     src: url('Adelica Brush.ttf');
 }
 
-/* NAVBAR ELEMENTS */
+/* NAVBAR CLASSES */
 .navbar-brand, .nav-link{
     color: white !important;
     font-family: adelica brush;
@@ -21,7 +21,7 @@
     border-radius: 10px;
 }
 
-/* SECTION 1 ELEMENTS */
+/* SECTION 1 CLASSES */
 /* .welcome {
     margin-left: 7vw
 }
@@ -41,10 +41,17 @@
     border-radius: 10px
 }
 
-.card-text {
+.card-title, .card-text {
     font-family: karla;
 }
 
 .img-fluid {
     border-radius: 10px;
+}
+
+/* SECTION 3 CLASSES */
+.bg-image {
+    background-repeat: no-repeat;
+    background-position-y: -500px;
+    background-size: auto 1200px;
 }
