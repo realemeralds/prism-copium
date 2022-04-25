@@ -1,11 +1,11 @@
 /* Again, only touch stuff that is under your section to avoid conflicts later... */
 
 /* Global font - DO NOT */
-
 @font-face {
     font-family: 'adelica brush';
     src: url('Adelica Brush.ttf');
 }
+
 /* NAVBAR ELEMENTS */
 .navbar-brand, .nav-link{
     color: white !important;
@@ -30,3 +30,21 @@
     padding-left: 7vw;
     padding-right: 5vw;
 } */
+
+/* SECTION 2 ELEMENTS */
+.second-heading {
+    font-family: karla;
+    text-align: center;
+}
+
+.card {
+    border-radius: 10px
+}
+
+.card-text {
+    font-family: karla;
+}
+
+.img-fluid {
+    border-radius: 10px;
+}
