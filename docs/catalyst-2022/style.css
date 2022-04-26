@@ -28,17 +28,6 @@
 }
 
 /* SECTION 1 ELEMENTS */
-/* .welcome {
-    margin-left: 7vw
-} */
-
-/* .hero .bg-image{
-    height: calc(100vh - 56px);
-    background-image: url('assets/background.svg');
-    background-repeat: repeat-x;
-    background-position: center;
-} */
-
 .spacer {
     aspect-ratio: 1000/150;
     width: 100%;
