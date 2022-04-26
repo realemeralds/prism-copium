@@ -39,6 +39,20 @@
     background-position: center;
 } */
 
+.spacer {
+    aspect-ratio: 1000/150;
+    width: 100%;
+    background-repeat:  no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.layer1 {
+    background-image: url(assets/layered-waves.svg);
+}
+
+
+
 .image-1 {
     padding: 1em;
     margin: 0 auto;
@@ -48,8 +62,9 @@
     background-color: rgba(28, 51, 95, 90%);
 }
 
-.container-fluid .hero {
-    height: calc(100vh - 56px);
+.container-fluid .bg-test {
+    height: calc(100vh - 100px);
+    overflow-y: hidden;
 }
 
 .welcome-text, .emphasis-welcome {
@@ -83,4 +98,10 @@
     color: white;
     font-size: 48px;
     margin-left: 5px;
+}
+
+.second .container-fluid {
+    position: relative;
+    bottom: 50px;
+    padding-bottom: 3rem !important;
 }
