@@ -1,13 +1,13 @@
 /* Again, only touch stuff that is under your section to avoid conflicts later... */
 
 /* Global font - DO NOT TOUCH */
-
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,700;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@1,800&display=swap');
 @font-face {
     font-family: 'adelica brush';
     src: url('../assets/Adelica Brush.ttf');
 }
+
 /* roboto mono autospace */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
@@ -71,7 +71,6 @@ body::-webkit-scrollbar {
 }
 
 /* SECTION 1 ELEMENTS */
-
 .hero {
     /* background-color: rgba(28, 51, 95, 90%); */
     background-color: var(--bg-color);
@@ -139,8 +138,8 @@ body::-webkit-scrollbar {
 #title {
     margin-left: 7vw;
 }
-/* wtf is the point of this */
 
+/* wtf is the point of this */
 .welcome-subtitle {
     color: white;
     font-size: 48px;
