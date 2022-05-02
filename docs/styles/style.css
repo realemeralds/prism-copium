@@ -62,7 +62,7 @@ body::-webkit-scrollbar {
     background-color: #00875B;
     padding: 0.24em;
     position: relative;
-    bottom: 1.5px;
+    /* bottom: 1.5px; */
 }
 
 .navbar .container-fluid {
