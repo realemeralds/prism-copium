@@ -1,0 +1,79 @@
+/* Global font - DO NOT TOUCH */
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,700;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch&family=Roboto+Mono&display=swap');
+@font-face {
+    font-family: 'adelica brush';
+    src: url('../assets/Adelica Brush.ttf');
+}
+
+/* roboto mono autospace */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+/* Custom variables */
+:root{
+    /* --bg-color: #32476f; */
+    --bg-color: #0E885F;
+    --bg-color-30-opacity:#215E4A4D;
+    --navbar-color: #12503B;
+    /* --em-color: #37B653; */
+    --em-color: #28B447; 
+    --secondary-color: green;
+}
+
+/* remove default formatting */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Karla", sans-serif;
+}
+
+/* NAVBAR ELEMENTS */
+.navbar {
+    background-color: var(--navbar-color);
+    color: white !important;
+    font-size: 20px;
+}
+
+.navbar-brand{
+    font-family: "Karla";
+    color: white !important;
+    font-size: 34px !important;
+}
+.nav-link{
+    font-family: "adelica brush";
+    margin: 0px 2.5%;
+    color: white !important;
+}
+
+.register {
+    border-radius: 10px;
+    background-color: #00875B;
+    padding: 0.24em;
+    position: relative;
+    bottom: 1.5px;
+}
+
+.navbar .container-fluid {
+    padding: 0 2vw;
+    width: 100%;
+}
+
+/* whole doc */
+.container {
+    background-color: var(--bg-color);
+    box-sizing: content-box;
+}
+
+/* first part */
+.title {
+    text-align: center;
+}
+
+.title h1 {
+    font-family: 'Cabin Sketch', cursive;
+    text-decoration: solid;
+    text-shadow: 10px 10px 4px #12503B;
+    color: white;
+}
