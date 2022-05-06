@@ -25,19 +25,20 @@
 /* SCROLLBAR */
 body::-webkit-scrollbar {
     width: 0.5em;
-  }
-   
-  body::-webkit-scrollbar-track {
+}
+
+body::-webkit-scrollbar-track {
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  }
-   
-  body::-webkit-scrollbar-thumb {
+}
+
+body::-webkit-scrollbar-thumb {
     background-color: #5094d4;
     border-radius: 8px;
-  }
-  body::-webkit-scrollbar-corner {
+}
+
+body::-webkit-scrollbar-corner {
     background-color: #587dc4;
-  }
+}
 
 /* NAVBAR ELEMENTS */
 .navbar {
@@ -51,6 +52,7 @@ body::-webkit-scrollbar {
     color: white !important;
     font-size: 34px !important;
 }
+
 .nav-link{
     font-family: "adelica brush";
     margin: 0px 2.5%;
@@ -117,7 +119,7 @@ body::-webkit-scrollbar {
     50% {
       border-color: transparent;
     }
-  }
+}
 
 .emphasis-welcome {
     /* font-family: 'Karla', sans-serif; */
