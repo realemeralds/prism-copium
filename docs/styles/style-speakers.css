@@ -1,9 +1,16 @@
 /* Global font - DO NOT TOUCH */
-@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,700;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,700;1,800&display=swap');
 @font-face {
     font-family: 'adelica brush';
     src: url('../assets/Adelica Brush.ttf');
+}
+
+h1 {
+    font-size: xx-large
+}
+
+h2 {
+    font-size: xx-large
 }
 
 /* roboto mono autospace */
@@ -59,13 +66,15 @@
     width: 100%;
 }
 
-/* Section 1 */
-
+/*
+ Section 1
+ */
 .container {
     position: relative;
 }
 
-/* Container 1 */
+/*
+ Container 1 
 .container .speaker1 {
     background-color: var(--bg-color);
     min-height: 363px;
@@ -88,7 +97,7 @@
     color: white;
 }
 
-/* Container 2 */
+ Container 2 
 .container .speaker2 {
     background-color: #389576;
     min-height: calc(76px + 363px * 2);
@@ -110,7 +119,7 @@
     border-radius: 50%;
 }
 
-/* Container 3 */
+ Container 3 
 .container .speaker3 {
     background-color: #639685;
     min-height: calc(76px*2 + 363px * 3);
@@ -129,9 +138,10 @@
 
 .speaker3 img {
     border-radius: 50%;
-}
+} 
+*/
 
-.footer {
+/* .footer {
     position: relative;
     top: calc(76px*2 + 363px * 2);
-}
+} */
