@@ -6,27 +6,27 @@
   src: url("../assets/fonts/Adelica Brush.ttf");
 }
 @font-face {
-  font-family: 'Futura Book';
+  font-family: "Futura Book";
   src: url("../assets/fonts/FuturaPTBook.otf");
 }
 @font-face {
-  font-family: 'Futura Medium';
+  font-family: "Futura Medium";
   src: url("../assets/fonts/FuturaPTMedium.otf");
 }
 @font-face {
-  font-family: 'Futura Demi';
+  font-family: "Futura Demi";
   src: url("../assets/fonts/FuturaPTDemi.otf");
 }
 @font-face {
-  font-family: 'Futura Bold';
+  font-family: "Futura Bold";
   src: url("../assets/fonts/FuturaPTBold.otf");
 }
 @font-face {
-  font-family: 'Futura Bold Italic';
+  font-family: "Futura Bold Italic";
   src: url("../assets/fonts/FuturaPTBoldOblique.otf") format("opentype");
 }
 @font-face {
-  font-family: 'Futura Heavy';
+  font-family: "Futura Heavy";
   src: url("../assets/fonts/FuturaPTHeavy.otf");
 }
 :root {
