@@ -11,51 +11,40 @@
 // Ordered by font weight.
 @font-face {
     font-family: 'Futura Book';
-    src: url(docs\assets\fonts\FuturaPTBook.otf);
+    src: url('../../docs/assets/fonts/FuturaPTBook.otf');
 }
 @font-face {
     font-family: 'Futura Medium';
-    src: url(docs\assets\fonts\FuturaPTMedium.otf);
+    src: url('../../docs/assets/fonts/FuturaPTMedium.otf');
 }
 @font-face {
     font-family: 'Futura Demi';
-    src: url(docs\assets\fonts\FuturaPTDemi.otf);
-}
-@font-face {
-    font-family: 'Futura Demi Italic';
-    src: url(docs\assets\fonts\FuturaPTDemiOblique.otf);
+    src: url('../../docs/assets/fonts/FuturaPTDemi.otf');
 }
 @font-face {
     font-family: 'Futura Bold';
-    src: url(docs\assets\fonts\FuturaPTBold.otf);
+    src: url('../../docs/assets/fonts/FuturaPTBold.otf');
 }
 @font-face {
     font-family: 'Futura Bold Italic';
-    src: url(docs\assets\fonts\FuturaPTBoldOblique.otf);
+    src: url('../../docs/assets/fonts/FuturaPTBoldOblique.otf') format("opentype");
 }
 @font-face {
     font-family: 'Futura Heavy';
-    src: url(docs\assets\fonts\FuturaPTHeavy.otf);
+    src: url('../../docs/assets/fonts/FuturaPTHeavy.otf');
 }
 
 // new colour scheme
 :root{
     // the two main colours
-    // --bg-color: #FFFFFF;
-    --bg-color: #215E4A;
+    --old-bg-color: #215E4A; 
+    --bg-color: #FFFFFF;
     --text-color: #08162C;
 
-    // the different accents used
-    --em1-color: #87A38A; // greenish
-    --em2-color: #EFB79D; // beige
-    --secondary-color: green;
-}
-
-// old colour scheme
-:root{
-    --bg-color: #215E4A;
     --navbar-color: #12503B;
     --em-color: #28B447; 
+    --em1-color: #87A38A; // greenish
+    --em2-color: #EFB79D; // beige
     --secondary-color: green;
 }
 
@@ -98,31 +87,34 @@
 
 /* NAVBAR ELEMENTS */
 .navbar {
-    background-color: var(--navbar-color);
-    color: white !important;
-    font-size: 20px;
+    background-color: var(--bg-color);
 
     .container-fluid { 
-        padding: 0 2vw;
+        padding: 0 2vw 0 2vw;
         width: 100%;
 
-        .navbar-brand { //. navbar logo
-            font-family: "Karla";
-            color: white;
+        .navbar-brand { // navbar logo
+            font-family: 'Futura Bold Italic', sans-serif;
+            color: var(--em1-color);
             font-size: 34px;
         }
 
         .nav-link { // class on all links on navbar
             font-family: "adelica brush";
             margin: 0px 2.5%;
-            color: white;
+            font-size: 22px;
+            color: var(--text-color);
         }
 
         .register { // register button
             border-radius: 10px;
-            background-color: #00875B;
-            padding: 0.24em;
+            background-color: var(--em2-color);
+            padding: 0.40em;
             position: relative;
+            .nav-link {
+                position: relative;
+                right: 2px;
+            }
         }
     }   
 }
@@ -140,44 +132,45 @@
         margin-left: 7vw;
 
         .first-line {
-            font-family: 'Karla', sans-serif;
+            font-family: 'Futura Medium', sans-serif;
             font-weight: 400;
             font-size: 120px;
             line-height: 0.85;
-            color: white;
+            color: var(--text-color);
             position: relative;
             width: max-content;
             
             #caret{
-                border-right: .05em solid white;
+                border-right: .05em solid var(--text-color);
                 animation: blink 1s steps(1) infinite;
                 margin-left: 3px;
             }            
         }
 
         .second-line {
-            font-family: 'Karla', sans-serif;
+            font-family: 'Futura Demi', sans-serif;
             font-style: italic;
             font-size: 120px;
-            color: var(--em-color);
+            color: #6B9B70; // custom darker colour
             font-weight: 700;
             position: relative;
             // bottom: 10px;
-            text-shadow: 6px 8px #00FF3830;
+            text-shadow: 6px 8px #6b9b7066;
 
             #caret{
-                border-right: .05em solid white;
+                border-right: .05em solid #6B9B70;
                 animation: blink 1s steps(1) infinite;
-                margin-left: 10px;
+                margin-left: 15px;
             }        
         }
 
         .third-line {
-            color: white;
+            color: var(--text-color);
+            font-family: 'Futura Medium', sans-serif;
             font-size: 48px;
             margin-left: 5px;
             opacity: 0;
-            animation: subtitle-fade-in 2s ease 5.1s forwards;
+            animation: fade-in 2s ease 5.1s forwards;
         }
     }
 }
@@ -186,18 +179,10 @@
     50% { border-color: transparent; }
 }
 
-@keyframes subtitle-fade-in {
+@keyframes fade-in {
     to {opacity: 1}
 }
 
-/* waves https://app.haikei.app/ */
-.spacer {
-    aspect-ratio: 1000/150;
-    width: 100%;
-    background-repeat:  no-repeat;
-    background-position: center;
-    background-size: cover;
-}
 
 .layer1 {
     background-image: url(../assets/layered-waves.svg);
@@ -212,7 +197,7 @@
 
 .second-heading {
     color: #743C09;
-    font-family: 'Karla', sans-serif;
+    font-family: 'Futura Medium', sans-serif;
     font-size: 60px;
     font-weight: 800;
     text-shadow: 3px 3px rgba(128, 123, 122, 0.3);
@@ -226,21 +211,21 @@
 }
 
 .social-heading {
-    font-family: 'Karla', sans-serif;
+    font-family: 'Futura Medium', sans-serif;
     font-weight: 700;
     font-size: 30px;
     color: #433202;
 }
 
 .social-subheading {
-    font-family: 'Karla', sans-serif;
+    font-family: 'Futura Medium', sans-serif;
     color: white;
     font-style: italic;
     font-size: 20px;
 }
 
 .social-text {
-    font-family: 'Karla', sans-serif;
+    font-family: 'Futura Medium', sans-serif;
     color: white !important;
     font-size: 16px;
 }
