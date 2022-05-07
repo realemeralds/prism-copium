@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // main
     document.getElementById('welcome' + String(index + 1)).style.whiteSpace = 'pre'
     typeWriter(txt[index], 0, 'welcome' + String(index + 1), () => {
-        typeWriter(txt[index], 0, 'welcome' + String(index + 1), null)
+        typeWriter(txt[index], 0, 'welcome' + String(index + 1), null);
         document.getElementById('welcome' + String(index + 1)).style.whiteSpace = 'pre'
     })
 })
