@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,700;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@1,800&display=swap');
+
+/* cursive font */
+@font-face {
+    font-family: 'adelica brush';
+    src: url('../assets/fonts/Adelica Brush.ttf');
+}
+
+// Futura Fonts, to replace backslashes with forward slashes
+// Ordered by font weight.
+@font-face {
+    font-family: 'Futura Book';
+    src: url(docs\assets\fonts\FuturaPTBook.otf);
+}
+@font-face {
+    font-family: 'Futura Medium';
+    src: url(docs\assets\fonts\FuturaPTMedium.otf);
+}
+@font-face {
+    font-family: 'Futura Demi';
+    src: url(docs\assets\fonts\FuturaPTDemi.otf);
+}
+@font-face {
+    font-family: 'Futura Demi Italic';
+    src: url(docs\assets\fonts\FuturaPTDemiOblique.otf);
+}
+@font-face {
+    font-family: 'Futura Bold';
+    src: url(docs\assets\fonts\FuturaPTBold.otf);
+}
+@font-face {
+    font-family: 'Futura Bold Italic';
+    src: url(docs\assets\fonts\FuturaPTBoldOblique.otf);
+}
+@font-face {
+    font-family: 'Futura Heavy';
+    src: url(docs\assets\fonts\FuturaPTHeavy.otf);
+}
+
+// new colour scheme
+:root{
+    // the two main colours
+    // --bg-color: #FFFFFF;
+    --bg-color: #215E4A;
+    --text-color: #08162C;
+
+    // the different accents used
+    --em1-color: #87A38A; // greenish
+    --em2-color: #EFB79D; // beige
+    --secondary-color: green;
+}
+
+// old colour scheme
+:root{
+    --bg-color: #215E4A;
+    --navbar-color: #12503B;
+    --em-color: #28B447; 
+    --secondary-color: green;
+}
+
+/// Mixin to customize scrollbars
+/// Beware, this does not work in all browsers
+/// @author Hugo Giraudel
+/// @param {Length} $size - Horizontal scrollbar's height and vertical scrollbar's width
+/// @param {Radius} $border-radius - Border radius around scrollbar
+/// @param {Color} $foreground-color - Scrollbar's color
+/// @param {Color} $background-color [mix($primary, white, 75%)] - Scrollbar's color
+/// @example scss - Scrollbar styling;
+@mixin scrollbars($size, $border-radius, $foreground-color, $shadow, $background-color: mix($foreground-color, white, 50%)) {
+    ::-webkit-scrollbar {
+        width:  $size;
+        height: $size;
+    }
+  
+    ::-webkit-scrollbar-thumb {
+        background: $foreground-color;
+        border-radius: $border-radius;
+    }
+  
+    ::-webkit-scrollbar-track {
+        background: $background-color;
+        box-shadow: $shadow;
+    }
+  
+    // For Internet Explorer
+    body {
+      scrollbar-face-color: $foreground-color;
+      scrollbar-track-color: $background-color;
+    }
+  }
+  
+// scrollbar: scrollbars($size, $border-radius, $foreground-color, $shadow, 
+// $background-color: mix($foreground-color, white, 50%))
+@include scrollbars(.5em, 8px,#5094d4, inset 0 0 6px rgba(0, 0, 0, 0.3), 
+                  #fbfbfb);
+  
+
+/* NAVBAR ELEMENTS */
+.navbar {
+    background-color: var(--navbar-color);
+    color: white !important;
+    font-size: 20px;
+
+    .container-fluid { 
+        padding: 0 2vw;
+        width: 100%;
+
+        .navbar-brand { //. navbar logo
+            font-family: "Karla";
+            color: white;
+            font-size: 34px;
+        }
+
+        .nav-link { // class on all links on navbar
+            font-family: "adelica brush";
+            margin: 0px 2.5%;
+            color: white;
+        }
+
+        .register { // register button
+            border-radius: 10px;
+            background-color: #00875B;
+            padding: 0.24em;
+            position: relative;
+        }
+    }   
+}
+
+// SECTION 1 ELEMENTS
+.hero {
+    background-color: var(--bg-color);
+    height: calc(100vh - 200px);
+    
+    #title {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        top: 80px;
+        margin-left: 7vw;
+
+        .first-line {
+            font-family: 'Karla', sans-serif;
+            font-weight: 400;
+            font-size: 120px;
+            line-height: 0.85;
+            color: white;
+            position: relative;
+            width: max-content;
+            
+            #caret{
+                border-right: .05em solid white;
+                animation: blink 1s steps(1) infinite;
+                margin-left: 3px;
+            }            
+        }
+
+        .second-line {
+            font-family: 'Karla', sans-serif;
+            font-style: italic;
+            font-size: 120px;
+            color: var(--em-color);
+            font-weight: 700;
+            position: relative;
+            // bottom: 10px;
+            text-shadow: 6px 8px #00FF3830;
+
+            #caret{
+                border-right: .05em solid white;
+                animation: blink 1s steps(1) infinite;
+                margin-left: 10px;
+            }        
+        }
+
+        .third-line {
+            color: white;
+            font-size: 48px;
+            margin-left: 5px;
+            opacity: 0;
+            animation: subtitle-fade-in 2s ease 5.1s forwards;
+        }
+    }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+@keyframes subtitle-fade-in {
+    to {opacity: 1}
+}
+
+/* waves https://app.haikei.app/ */
+.spacer {
+    aspect-ratio: 1000/150;
+    width: 100%;
+    background-repeat:  no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.layer1 {
+    background-image: url(../assets/layered-waves.svg);
+}
+
+/* second sectopm */
+.second .container-fluid {
+    position: relative;
+    bottom: 50px;
+    padding-bottom: 3rem !important;
+}
+
+.second-heading {
+    color: #743C09;
+    font-family: 'Karla', sans-serif;
+    font-size: 60px;
+    font-weight: 800;
+    text-shadow: 3px 3px rgba(128, 123, 122, 0.3);
+}
+
+.card-social {
+    background: #63A8FF;
+    border-radius: 10px;
+    border-color: #63A8FF;
+    position: relative;
+}
+
+.social-heading {
+    font-family: 'Karla', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    color: #433202;
+}
+
+.social-subheading {
+    font-family: 'Karla', sans-serif;
+    color: white;
+    font-style: italic;
+    font-size: 20px;
+}
+
+.social-text {
+    font-family: 'Karla', sans-serif;
+    color: white !important;
+    font-size: 16px;
+}
+
+.second .img-fluid {
+    border-radius: 15%;
+}
+
+.img-1 {
+    position: relative;
+    top: 30px;
+    left: 20px;
+}
+
+.img-2 {
+    /* left: 60px;
+    top: 80px; */
+    position: relative;
+}
+
+.img-3 {
+    width: 100%;
+}
+
+.row-12 {
+    padding-top: 10vw;
+    padding-bottom: 10vw;
+    position: relative;
+    right: 4vw;
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+}
+
+.row-12 div {
+    margin: 0px 2.5vw;
+}
+
+.row-13 {
+    padding-bottom: 10vh;
+    position: relative;
+    padding-right: 0;
+}
+
+.row-13 div {
+    margin: 0px 2.5vw;
+}
