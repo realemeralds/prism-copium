@@ -52,8 +52,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Futura Demi", sans-serif;
-    
+    font-family: "Futura Bold", sans-serif;
 }
 
 /* NAVBAR ELEMENTS */
@@ -113,6 +112,4 @@
     right: 5px;
 }
 
-p {
-    font-size: 20px;
-}
+
