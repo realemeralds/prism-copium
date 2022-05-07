@@ -34,6 +34,9 @@
     src: url('../../docs/assets/fonts/FuturaPTHeavy.otf');
 }
 
+// variables
+$lg: 992px;
+
 // new colour scheme
 :root{
     // the two main colours
@@ -77,7 +80,7 @@
       scrollbar-face-color: $foreground-color;
       scrollbar-track-color: $background-color;
     }
-  }
+}
   
 // scrollbar: scrollbars($size, $border-radius, $foreground-color, $shadow, 
 // $background-color: mix($foreground-color, white, 50%))
