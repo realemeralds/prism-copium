@@ -8,32 +8,32 @@
 
 @font-face {
   font-family: 'Futura Book';
-  src: url("../../docs/assets/fonts/FuturaPTBook.otf");
+  src: url("../assets/fonts/FuturaPTBook.otf");
 }
 
 @font-face {
   font-family: 'Futura Medium';
-  src: url("../../docs/assets/fonts/FuturaPTMedium.otf");
+  src: url("../assets/fonts/FuturaPTMedium.otf");
 }
 
 @font-face {
   font-family: 'Futura Demi';
-  src: url("../../docs/assets/fonts/FuturaPTDemi.otf");
+  src: url("../assets/fonts/FuturaPTDemi.otf");
 }
 
 @font-face {
   font-family: 'Futura Bold';
-  src: url("../../docs/assets/fonts/FuturaPTBold.otf");
+  src: url("../assets/fonts/FuturaPTBold.otf");
 }
 
 @font-face {
   font-family: 'Futura Bold Italic';
-  src: url("../../docs/assets/fonts/FuturaPTBoldOblique.otf") format("opentype");
+  src: url("../assets/fonts/FuturaPTBoldOblique.otf") format("opentype");
 }
 
 @font-face {
   font-family: 'Futura Heavy';
-  src: url("../../docs/assets/fonts/FuturaPTHeavy.otf");
+  src: url("../assets/fonts/FuturaPTHeavy.otf");
 }
 
 :root {
