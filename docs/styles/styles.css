@@ -2,33 +2,40 @@
 @import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@1,800&display=swap");
 /* cursive font */
 @font-face {
-  font-family: "adelica brush";
+  font-family: 'adelica brush';
   src: url("../assets/fonts/Adelica Brush.ttf");
 }
+
 @font-face {
   font-family: "Futura Book";
   src: url("../assets/fonts/FuturaPTBook.otf");
 }
+
 @font-face {
   font-family: "Futura Medium";
   src: url("../assets/fonts/FuturaPTMedium.otf");
 }
+
 @font-face {
   font-family: "Futura Demi";
   src: url("../assets/fonts/FuturaPTDemi.otf");
 }
+
 @font-face {
   font-family: "Futura Bold";
   src: url("../assets/fonts/FuturaPTBold.otf");
 }
+
 @font-face {
   font-family: "Futura Bold Italic";
   src: url("../assets/fonts/FuturaPTBoldOblique.otf") format("opentype");
 }
+
 @font-face {
   font-family: "Futura Heavy";
   src: url("../assets/fonts/FuturaPTHeavy.otf");
 }
+
 :root {
   --old-bg-color: #215E4A;
   --bg-color: #FFFFFF;
@@ -38,6 +45,13 @@
   --em1-color: #87A38A;
   --em2-color: #EFB79D;
   --secondary-color: green;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 ::-webkit-scrollbar {
@@ -52,7 +66,8 @@
 
 ::-webkit-scrollbar-track {
   background: #ffffff;
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+          box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
 }
 
 body {
@@ -64,125 +79,185 @@ body {
 .navbar {
   background-color: var(--bg-color);
 }
+
 .navbar .container-fluid {
   padding: 0 2vw 0 2vw;
   width: 100%;
 }
+
 .navbar .container-fluid .navbar-brand {
-  font-family: "Futura Bold Italic", sans-serif;
+  font-family: 'Futura Bold Italic', sans-serif;
   color: var(--em1-color);
   font-size: 34px;
 }
+
 .navbar .container-fluid .nav-link {
   font-family: "adelica brush";
   margin: 0px 2.5%;
   font-size: 22px;
   color: var(--text-color);
 }
+
 .navbar .container-fluid .register {
   border-radius: 10px;
   background-color: var(--em2-color);
   padding: 0.4em;
   position: relative;
 }
-.navbar .container-fluid .register .nav-link {
-  position: relative;
-  right: 2px;
-}
 
-.hero {
+.homepage .hero {
   background-color: var(--bg-color);
   height: calc(100vh - 77.8px);
-  justify-content: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  background-image: url("assets/line 1.svg");
+  background-position: center;
+  background-size: contain;
+  padding-top: 10vh;
 }
-.hero #title {
+
+.homepage .hero #title {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
   margin-left: 5.890804vw;
   height: calc(100vh - 77.8px);
 }
+
 @media (max-width: 992px) {
-  .hero #title {
-    justify-content: center;
-    width: 90vw !important;
+  .homepage .hero #title {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 85.569vw !important;
     margin: 0 7vw;
   }
 }
+
 @media (max-width: 992px) {
-  .hero #title .container-fluid {
-    justify-content: center;
+  .homepage .hero #title .container-fluid {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     width: 85.569vw !important;
   }
 }
-.hero #title .container-fluid .first-line {
-  font-family: "Futura Medium", sans-serif;
+
+.homepage .hero #title .container-fluid .first-line {
+  font-family: 'Futura Medium', sans-serif;
   font-weight: 400;
   font-size: clamp(80px, 8vw, 150px);
   line-height: 0.85;
   color: var(--text-color);
   position: relative;
 }
+
 @media (max-width: 992px) {
-  .hero #title .container-fluid .first-line {
+  .homepage .hero #title .container-fluid .first-line {
     text-align: center;
     font-size: 13vw;
     z-index: 1;
   }
 }
-.hero #title .container-fluid .first-line #caret {
+
+.homepage .hero #title .container-fluid .first-line #caret {
   border-right: 0.05em solid var(--text-color);
-  animation: blink 1s steps(1) infinite;
+  -webkit-animation: blink 1s steps(1) infinite;
+          animation: blink 1s steps(1) infinite;
   margin-left: 3px;
 }
+
 @media (max-width: 992px) {
-  .hero #title .container-2 {
-    justify-content: center;
+  .homepage .hero #title .container-2 {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     width: 85.569vw !important;
   }
 }
-.hero #title .container-2 .second-line {
-  font-family: "Futura Demi", sans-serif;
+
+.homepage .hero #title .container-2 .second-line {
+  font-family: 'Futura Demi', sans-serif;
   font-style: italic;
-  font-size: clamp(80px, 8.5vw, 130px);
+  font-size: clamp(80px, 8.5vw, 200px);
   color: #6B9B70;
   font-weight: 700;
   position: relative;
-  text-shadow: 6px 8px rgba(107, 155, 112, 0.4);
-  overflow: hidden;
-  width: 51.4vw;
+  text-shadow: 10px 10px #6b9b7066;
+  white-space: pre;
+  z-index: 102;
   overflow-wrap: break-word;
   right: 5px;
 }
+
 @media (max-width: 992px) {
-  .hero #title .container-2 .second-line {
+  .homepage .hero #title .container-2 .second-line {
     text-align: center;
     font-size: 14vw;
     z-index: 2;
-    width: max-content;
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
+    padding-right: calc(15px + 0.5em);
+    white-space: pre;
+    z-index: 102;
   }
 }
-.hero #title .container-2 .second-line #caret {
-  border-right: 0.05em solid #6B9B70;
-  animation: blink 1s steps(1) infinite;
+
+.homepage .hero #title .container-2 .second-line #caret {
+  border-right: .05em solid #6B9B70;
+  -webkit-animation: blink 1s steps(1) infinite;
+          animation: blink 1s steps(1) infinite;
   margin-left: 15px;
 }
-.hero #title .third-line {
+
+.homepage .hero #title .third-line {
   color: var(--text-color);
-  font-family: "Futura Medium", sans-serif;
+  font-family: 'Futura Medium', sans-serif;
   font-size: clamp(35px, 3vw, 80px);
   margin-left: 8px;
   opacity: 1;
-  animation: fade-in 2s ease 5.1s both;
-  text-shadow: 0px 4px 4px rgba(8, 22, 44, 0.2117647059);
+  text-shadow: 0px 4px 4px #08162c36;
+  z-index: 101;
 }
-.hero img {
-  width: 33.8362vw;
+
+.homepage .hero .container #earth {
+  width: 33vw;
   border-radius: 50%;
-  align-self: center;
-  margin: 0 5vw;
-  animation: fade-in 2s ease 5.1s both;
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+  margin: 0 2vw 0 5vw;
+  z-index: 400;
+}
+
+.homepage .hero #line1 {
+  position: absolute;
+  z-index: 50;
+  top: 20.64%;
+  width: 99vw;
+}
+
+.homepage .hero #line2 {
+  position: absolute;
+  z-index: 51;
+  top: 27.365%;
+  width: 99vw;
+}
+
+@-webkit-keyframes blink {
+  50% {
+    border-color: transparent;
+  }
 }
 
 @keyframes blink {
@@ -190,6 +265,16 @@ body {
     border-color: transparent;
   }
 }
+
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 @keyframes fade-in {
   from {
     opacity: 0;
@@ -198,90 +283,113 @@ body {
     opacity: 1;
   }
 }
-.footer {
+
+.homepage .footer {
   background-color: var(--old-bg-color);
 }
 
-/* second sectopm */
-.second {
-  position: relative;
-  bottom: 50px;
-  padding-bottom: 3rem !important;
-}
-.second .second-heading {
-  color: #743C09;
-  font-family: "Futura Medium", sans-serif;
-  font-size: 60px;
-  font-weight: 800;
-  text-shadow: 3px 3px rgba(128, 123, 122, 0.3);
-}
-.second .card-social {
-  background: #63A8FF;
-  border-radius: 10px;
-  border-color: #63A8FF;
-  position: relative;
-}
-
-.register {
+.homepage .register {
   background-color: #B37A4C;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: "Futura Bold";
-  font-style: "normal";
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Futura Bold';
+  font-style: 'normal';
   font-weight: 700;
 }
+
 @media screen and (min-width: 992px) {
-  .register .date {
+  .homepage .register .date {
     height: 192px;
     font-size: 150px;
     line-height: 192px;
   }
 }
+
 @media screen and (max-width: 992px) {
-  .register .date {
+  .homepage .register .date {
     font-size: 50px;
   }
 }
+
 @media screen and (min-width: 992px) {
-  .register .time {
+  .homepage .register .time {
     height: 154px;
     font-size: 120px;
     line-height: 154px;
   }
 }
+
 @media screen and (max-width: 992px) {
-  .register .time {
+  .homepage .register .time {
     font-size: 40px;
   }
 }
+<<<<<<< HEAD
 .register div img {
   width: 9.2592592593%;
 }
 .register div button {
+=======
+
+.homepage .register button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+>>>>>>> new-branch
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-color: #08162C;
   border: 0;
   border-radius: 200px;
 }
+<<<<<<< HEAD
 .register div button span {
+=======
+
+.homepage .register button span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+>>>>>>> new-branch
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 @media screen and (min-width: 992px) {
+<<<<<<< HEAD
   .register div button {
+=======
+  .homepage .register button {
+>>>>>>> new-branch
     height: 219px;
     width: 644px;
   }
+<<<<<<< HEAD
   .register div button span p {
+=======
+  .homepage .register button span p {
+>>>>>>> new-branch
     height: 123px;
     font-size: 96px;
     line-height: 123px;
   }
 }
+
 @media screen and (max-width: 992px) {
+<<<<<<< HEAD
   .register div button {
     height: 73px;
     width: 214.6666666667px;
@@ -304,3 +412,17 @@ body {
 }
 
 /*# sourceMappingURL=styles.css.map */
+=======
+  .homepage .register button {
+    height: calc(219px / 3);
+    width: calc(644px / 3);
+    margin: calc(133px / 3) 0px calc(65px / 3) 0px;
+  }
+  .homepage .register button span p {
+    height: calc(123px / 3);
+    font-size: calc(96px / 3);
+    line-height: calc(123px / 3);
+  }
+}
+/*# sourceMappingURL=styles.css.map */
+>>>>>>> new-branch
