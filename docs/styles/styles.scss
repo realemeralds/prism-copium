@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,700;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@1,800&display=swap');
+
+/* cursive font */
+@font-face {
+    font-family: 'adelica brush';
+    src: url('../assets/fonts/Adelica Brush.ttf');
+}
+
+// Futura Fonts, to replace backslashes with forward slashes
+// Ordered by font weight.
+@font-face {
+    font-family: 'Futura Book';
+    src: url('../../docs/assets/fonts/FuturaPTBook.otf');
+}
+@font-face {
+    font-family: 'Futura Medium';
+    src: url('../../docs/assets/fonts/FuturaPTMedium.otf');
+}
+@font-face {
+    font-family: 'Futura Demi';
+    src: url('../../docs/assets/fonts/FuturaPTDemi.otf');
+}
+@font-face {
+    font-family: 'Futura Bold';
+    src: url('../../docs/assets/fonts/FuturaPTBold.otf');
+}
+@font-face {
+    font-family: 'Futura Bold Italic';
+    src: url('../../docs/assets/fonts/FuturaPTBoldOblique.otf') format("opentype");
+}
+@font-face {
+    font-family: 'Futura Heavy';
+    src: url('../../docs/assets/fonts/FuturaPTHeavy.otf');
+}
+
+// new colour scheme
+:root{
+    // the two main colours
+    --old-bg-color: #215E4A; 
+    --bg-color: #FFFFFF;
+    --text-color: #08162C;
+
+    --navbar-color: #12503B;
+    --em-color: #28B447; 
+    --em1-color: #87A38A; // greenish
+    --em2-color: #EFB79D; // beige
+    --secondary-color: green;
+}
+
+/// Mixin to customize scrollbars
+/// Beware, this does not work in all browsers
+/// @author Hugo Giraudel
+/// @param {Length} $size - Horizontal scrollbar's height and vertical scrollbar's width
+/// @param {Radius} $border-radius - Border radius around scrollbar
+/// @param {Color} $foreground-color - Scrollbar's color
+/// @param {Color} $background-color [mix($primary, white, 75%)] - Scrollbar's color
+/// @example scss - Scrollbar styling;
+@mixin scrollbars($size, $border-radius, $foreground-color, $shadow, $background-color: mix($foreground-color, white, 50%)) {
+    ::-webkit-scrollbar {
+        width:  $size;
+        height: $size;
+    }
+  
+    ::-webkit-scrollbar-thumb {
+        background: $foreground-color;
+        border-radius: $border-radius;
+    }
+  
+    ::-webkit-scrollbar-track {
+        background: $background-color;
+        box-shadow: $shadow;
+    }
+  
+    // For Internet Explorer
+    body {
+      scrollbar-face-color: $foreground-color;
+      scrollbar-track-color: $background-color;
+    }
+  }
+  
+// scrollbar: scrollbars($size, $border-radius, $foreground-color, $shadow, 
+// $background-color: mix($foreground-color, white, 50%))
+@include scrollbars(.5em, 8px, slategrey, inset 0 0 6px rgba(0, 0, 0, 0.1), 
+                  #ffffff);
+  
+
+/* NAVBAR ELEMENTS */
+.navbar {
+    background-color: var(--bg-color);
+
+    .container-fluid { 
+        padding: 0 2vw 0 2vw;
+        width: 100%;
+
+        .navbar-brand { // navbar logo
+            font-family: 'Futura Bold Italic', sans-serif;
+            color: var(--em1-color);
+            font-size: 34px;
+        }
+
+        .nav-link { // class on all links on navbar
+            font-family: "adelica brush";
+            margin: 0px 2.5%;
+            font-size: 22px;
+            color: var(--text-color);
+        }
+
+        .register { // register button
+            border-radius: 10px;
+            background-color: var(--em2-color);
+            padding: 0.40em;
+            position: relative;
+            .nav-link {
+                position: relative;
+                right: 2px;
+            }
+        }
+    }   
+}
+
+// SECTION 1 ELEMENTS
+.hero {
+    background-color: var(--bg-color);
+    height: calc(100vh - 77.8px);
+    justify-content: flex-start;
+    
+    #title {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 5.890804vw;
+        height: calc(100vh - 77.8px);
+
+        @media (max-width: 992px) {
+            justify-content: center;
+            width: 90vw !important;
+            margin: 0 7vw;
+        }
+        
+        .container-fluid {
+            @media (max-width: 992px) {
+                justify-content: center;
+                width: 85.569vw !important;
+            }
+
+            .first-line {
+            font-family: 'Futura Medium', sans-serif;
+            font-weight: 400;
+            font-size: clamp(80px, 8vw, 150px);
+            line-height: 0.85;
+            color: var(--text-color);
+            position: relative;
+
+            @media (max-width: 992px) {
+                text-align: center;
+                font-size: 13vw;
+                z-index: 1;
+            }    
+            
+            #caret{
+                border-right: .05em solid var(--text-color);
+                animation: blink 1s steps(1) infinite;
+                margin-left: 3px;
+            }     
+        }
+    }
+        .container-2 {
+            @media (max-width: 992px) {
+                justify-content: center;
+                width: 85.569vw !important
+            }
+
+            .second-line {
+                font-family: 'Futura Demi', sans-serif;
+                font-style: italic;
+                font-size: clamp(80px, 8.5vw, 130px);
+                color: #6B9B70; // custom darker colour
+                font-weight: 700;
+                position: relative;
+                text-shadow: 6px 8px #6b9b7066;
+                overflow: hidden;
+                width: 51.4vw;
+                overflow-wrap: break-word;
+                right: 5px;
+    
+                @media (max-width: 992px) {
+                    text-align: center;
+                    font-size: 14vw;
+                    z-index: 2;
+                    width: max-content;
+                }    
+                
+                #caret{
+                    border-right: .05em solid #6B9B70;
+                    animation: blink 1s steps(1) infinite;
+                    margin-left: 15px;
+                }        
+            }
+        }
+        
+
+        .third-line {
+            color: var(--text-color);
+            font-family: 'Futura Medium', sans-serif;
+            font-size: clamp(35px, 3vw, 80px);
+            margin-left: 8px;
+            opacity: 1;
+            animation: fade-in 2s ease 5.1s both;
+            text-shadow: 0px 4px 4px #08162c36;
+        }
+    }
+
+    img {
+        width: 33.83620vw;
+        border-radius: 50%;
+        align-self: center;
+        margin: 0 5vw;
+        animation: fade-in 2s ease 5.1s both;
+    }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+@keyframes fade-in {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+.footer {
+    background-color: var(--old-bg-color);
+}
+
+/* second sectopm */
+
+.second {
+    position: relative;
+    bottom: 50px;
+    padding-bottom: 3rem !important;
+    
+    .second-heading {
+        color: #743C09;
+        font-family: 'Futura Medium', sans-serif;
+        font-size: 60px;
+        font-weight: 800;
+        text-shadow: 3px 3px rgba(128, 123, 122, 0.3);
+    }
+
+
+    .card-social {
+        background: #63A8FF;
+        border-radius: 10px;
+        border-color: #63A8FF;
+        position: relative;
+    }    
+}
+
+
+// .social-heading {
+//     font-family: 'Futura Medium', sans-serif;
+//     font-weight: 700;
+//     font-size: 30px;
+//     color: #433202;
+// }
+
+// .social-subheading {
+//     font-family: 'Futura Medium', sans-serif;
+//     color: white;
+//     font-style: italic;
+//     font-size: 20px;
+// }
+
+// .social-text {
+//     font-family: 'Futura Medium', sans-serif;
+//     color: white !important;
+//     font-size: 16px;
+// }
+
+// .second .img-fluid {
+//     border-radius: 15%;
+// }
+
+// .img-1 {
+//     position: relative;
+//     top: 30px;
+//     left: 20px;
+// }
+
+// .img-2 {
+//     /* left: 60px;
+//     top: 80px; */
+//     position: relative;
+// }
+
+// .img-3 {
+//     width: 100%;
+// }
+
+// .row-12 {
+//     padding-top: 10vw;
+//     padding-bottom: 10vw;
+//     position: relative;
+//     right: 4vw;
+//     padding-left: 2.4rem;
+//     padding-right: 2.4rem;
+// }
+
+// .row-12 div {
+//     margin: 0px 2.5vw;
+// }
+
+// .row-13 {
+//     padding-bottom: 10vh;
+//     position: relative;
+//     padding-right: 0;
+// }
+
+// .row-13 div {
+//     margin: 0px 2.5vw;
+// }
