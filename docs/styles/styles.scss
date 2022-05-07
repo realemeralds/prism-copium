@@ -296,6 +296,10 @@ $lg: 992px;
     }
 
     div {
+        img {
+            width: calc(100 / 1080 * 100%);
+        }
+
         button {
             display: flex;
             align-items: center;
@@ -309,8 +313,7 @@ $lg: 992px;
                 display: flex;
                 align-items: center;
             }
-    
-    
+
             @media screen and (min-width: $lg) {
                 height: 219px;
                 width: 644px;

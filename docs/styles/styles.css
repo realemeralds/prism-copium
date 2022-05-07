@@ -255,6 +255,9 @@ body {
     font-size: 40px;
   }
 }
+.register div img {
+  width: 9.2592592593%;
+}
 .register div button {
   display: flex;
   align-items: center;
