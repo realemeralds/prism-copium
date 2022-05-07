@@ -349,6 +349,369 @@ $lg: 992px;
     }
 }
 
-.speakerspage {
 
-}
+// @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,700;1,700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@1,800&display=swap');
+
+// /* cursive font */
+// @font-face {
+//     font-family: 'adelica brush';
+//     src: url('../assets/fonts/Adelica Brush.ttf');
+// }
+
+// // Futura Fonts, to replace backslashes with forward slashes
+// // Ordered by font weight.
+// @font-face {
+//     font-family: 'Futura Book';
+//     src: url('../assets/fonts/FuturaPTBook.otf');
+// }
+// @font-face {
+//     font-family: 'Futura Medium';
+//     src: url('../assets/fonts/FuturaPTMedium.otf');
+// }
+// @font-face {
+//     font-family: 'Futura Demi';
+//     src: url('../assets/fonts/FuturaPTDemi.otf');
+// }
+// @font-face {
+//     font-family: 'Futura Bold';
+//     src: url('../assets/fonts/FuturaPTBold.otf');
+// }
+// @font-face {
+//     font-family: 'Futura Bold Italic';
+//     src: url('../assets/fonts/FuturaPTBoldOblique.otf') format("opentype");
+// }
+// @font-face {
+//     font-family: 'Futura Heavy';
+//     src: url('../assets/fonts/FuturaPTHeavy.otf');
+// }
+
+// // variables
+// $lg: 992px;
+
+// // new colour scheme
+// :root{
+//     // the two main colours
+//     --old-bg-color: #215E4A; 
+//     --bg-color: #FFFFFF;
+//     --text-color: #08162C;
+
+//     --navbar-color: #12503B;
+//     --em-color: #28B447; 
+//     --em1-color: #87A38A; // greenish
+//     --em2-color: #EFB79D; // beige
+//     --secondary-color: green;
+// }
+
+// /// Mixin to customize scrollbars
+// /// Beware, this does not work in all browsers
+// /// @author Hugo Giraudel
+// /// @param {Length} $size - Horizontal scrollbar's height and vertical scrollbar's width
+// /// @param {Radius} $border-radius - Border radius around scrollbar
+// /// @param {Color} $foreground-color - Scrollbar's color
+// /// @param {Color} $background-color [mix($primary, white, 75%)] - Scrollbar's color
+// /// @example scss - Scrollbar styling;
+// @mixin scrollbars($size, $border-radius, $foreground-color, $shadow, $background-color: mix($foreground-color, white, 50%)) {
+//     ::-webkit-scrollbar {
+//         width:  $size;
+//         height: $size;
+//     }
+  
+//     ::-webkit-scrollbar-thumb {
+//         background: $foreground-color;
+//         border-radius: $border-radius;
+//     }
+  
+//     ::-webkit-scrollbar-track {
+//         background: $background-color;
+//         box-shadow: $shadow;
+//     }
+  
+//     // For Internet Explorer
+//     body {
+//       scrollbar-face-color: $foreground-color;
+//       scrollbar-track-color: $background-color;
+//     }
+// }
+  
+// // remove default margins
+// * {
+//     margin: 0;
+//     padding: 0;
+//     box-sizing: border-box;
+// }
+
+// // scrollbar: scrollbars($size, $border-radius, $foreground-color, $shadow, 
+// // $background-color: mix($foreground-color, white, 50%))
+// @include scrollbars(.5em, 8px, slategrey, inset 0 0 6px rgba(0, 0, 0, 0.1), 
+//                   #ffffff);
+  
+// /* NAVBAR ELEMENTS */
+// .navbar {
+//     background-color: var(--bg-color);
+
+//     .container-fluid { 
+//         padding: 0 2vw 0 2vw;
+//         width: 100%;
+
+//         .navbar-brand { // navbar logo
+//             font-family: 'Futura Bold Italic', sans-serif;
+//             color: var(--em1-color);
+//             font-size: 34px;
+//         }
+
+//         .nav-link { // class on all links on navbar
+//             font-family: "adelica brush";
+//             margin: 0px 2.5%;
+//             font-size: 22px;
+//             color: var(--text-color);
+//         }
+
+//         .register { // register button
+//             border-radius: 10px;
+//             background-color: var(--em2-color);
+//             padding: 0.4em;
+//             position: relative;
+//         }
+//     }   
+// }
+
+
+// // HOMEPAGE
+// .homepage{
+//     // SECTION 1 ELEMENTS
+//     .hero {
+//         background-color: var(--bg-color);
+//         height: calc(100vh - 77.8px);
+//         justify-content: flex-start;
+//         background-image: url("assets/line 1.svg");
+//         background-position: center;
+//         background-size: contain;
+//         padding-top: 10vh;
+
+//         #title {
+//             position: relative;
+//             display: flex;
+//             flex-direction: column;
+//             justify-content: start;
+//             margin-left: 5.890804vw;
+//             height: calc(100vh - 77.8px);
+
+//             @media (max-width: 992px) {
+//                 justify-content: center;
+//                 width: 85.569vw !important;
+//                 margin: 0 7vw;
+//             }
+            
+//             .container-fluid {
+//                 @media (max-width: 992px) {
+//                     justify-content: center;
+//                     width: 85.569vw !important;
+//                 }
+
+//                 .first-line {
+//                 font-family: 'Futura Medium', sans-serif;
+//                 font-weight: 400;
+//                 font-size: clamp(80px, 8vw, 150px);
+//                 line-height: 0.85;
+//                 color: var(--text-color);
+//                 position: relative;
+
+//                 @media (max-width: 992px) {
+//                     text-align: center;
+//                     font-size: 13vw;
+//                     z-index: 1;
+//                 }    
+                
+//                 #caret{
+//                     border-right: .05em solid var(--text-color);
+//                     animation: blink 1s steps(1) infinite;
+//                     margin-left: 3px;
+//                 }     
+//             }
+//         }
+//             .container-2 {
+//                 @media (max-width: 992px) {
+//                     justify-content: center;
+//                     width: 85.569vw !important
+//                 }
+
+//                 .second-line {
+//                     font-family: 'Futura Demi', sans-serif;
+//                     font-style: italic;
+//                     font-size: clamp(80px, 8.5vw, 200px);
+//                     color: #6B9B70; // custom darker colour
+//                     font-weight: 700;
+//                     position: relative;
+//                     text-shadow: 10px 10px #6b9b7066;
+//                     // width: 53vw;
+//                     white-space: pre;
+//                     z-index: 102;
+
+//                     overflow-wrap: break-word;
+//                     right: 5px;
+        
+//                     @media (max-width: 992px) {
+//                         text-align: center;
+//                         font-size: 14vw;
+//                         z-index: 2;
+//                         width: min-content;
+//                         padding-right: calc(15px + 0.5em);
+//                         white-space: pre;
+//                         z-index: 102;
+//                     }    
+                    
+//                     #caret{
+//                         border-right: .05em solid #6B9B70;
+//                         animation: blink 1s steps(1) infinite;
+//                         margin-left: 15px;
+//                     }        
+//                 }
+//             }
+            
+
+//             .third-line {
+//                 color: var(--text-color);
+//                 font-family: 'Futura Medium', sans-serif;
+//                 font-size: clamp(35px, 3vw, 80px);
+//                 margin-left: 8px;
+//                 opacity: 1;
+//                 // animation: fade-in 2s ease 5.1s both; TODO: Remove
+//                 text-shadow: 0px 4px 4px #08162c36;
+//                 z-index: 101;
+//             }
+
+
+//         }
+//         .container {
+//             #earth {
+//                 width: 33vw;
+//                 border-radius: 50%;
+//                 align-self: start;
+//                 margin: 0 2vw 0 5vw;
+//                 // animation: fade-in 2s ease 5.1s both;
+//                 z-index: 400;
+//             }
+//     }
+//         #line1 {
+//             position: absolute;
+//             z-index: 50;
+//             top: 20.64%;
+//             width: 99vw;
+//         }
+//         #line2 {
+//             position: absolute;
+//             z-index: 51;
+//             top: 27.365%;
+//             width: 99vw;
+            
+//         }
+//     }
+
+//     @keyframes blink {
+//         50% { border-color: transparent; }
+//     }
+
+//     @keyframes fade-in {
+//         from {opacity: 0}
+//         to {opacity: 1}
+//     }
+
+
+//     .footer {
+//         background-color: var(--old-bg-color);
+//     }
+
+//     // register
+//     .register {
+//         background-color: #B37A4C;
+//         display: flex;
+//         flex-direction: column;
+//         align-items: center;
+
+//         font-family: 'Futura Bold';
+//         font-style: 'normal';
+//         font-weight: 700;
+
+//         .date {
+//             @media screen and (min-width: $lg) {
+//                 height: 192px;
+//                 font-size: 150px;
+//                 line-height: 192px;
+//             }
+//             @media screen and (max-width: $lg) {
+//                 font-size: 50px;
+//             }
+//         }
+
+//         .time {
+//             @media screen and (min-width: $lg) {
+//                 height: 154px;
+//                 font-size: 120px;
+//                 line-height: 154px;
+//             }
+
+//             @media screen and (max-width: $lg) {
+//                 font-size: 40px;
+//             }
+//         }
+
+//         button {
+//             display: flex;
+//             align-items: center;
+//             justify-content: center;
+
+//             background-color: #08162C;
+//             border: 0;
+//             border-radius: 200px;
+
+//             span {
+//                 display: flex;
+//                 align-items: center;
+//             }
+
+
+//             @media screen and (min-width: $lg) {
+//                 height: 219px;
+//                 width: 644px;
+//                 margin: 133px 0px 65px 0px;
+
+//                 span {
+//                     p {
+//                         height: 123px;
+//                         font-size: 96px;
+//                         line-height: 123px;
+//                     }
+//                 }
+//             }
+
+//             @media screen and (max-width: $lg) {
+//                 height: calc(219px / 3);
+//                 width: calc(644px / 3);
+//                 margin: calc(133px / 3) 0px calc(65px / 3) 0px;
+
+//                 span {
+//                     p {
+//                         height : calc(123px / 3);
+//                         font-size: calc(96px / 3);
+//                         line-height: calc(123px / 3);
+//                     }
+//                 }
+//             }
+//         }
+        
+//         @media screen and (min-width: $lg) {
+//             margin: 133px 0px 65px 0px;
+//         }
+        
+//         @media screen and (max-width: $lg) {
+//             margin: calc(133px / 3) 0px calc(65px / 3) 0px;
+//         }
+//     }
+// }
+
+// .speakerspage {
+
+
+
+// }
