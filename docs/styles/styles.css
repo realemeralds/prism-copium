@@ -44,6 +44,8 @@
   --em-color: #28B447;
   --em1-color: #87A38A;
   --em2-color: #EFB79D;
+  --em3-color: #AFF1BD;
+  --em4-color: #6B9B70;
   --secondary-color: green;
 }
 
@@ -88,7 +90,7 @@ body {
 .navbar .container-fluid .navbar-brand {
   font-family: 'Futura Bold Italic', sans-serif;
   color: var(--em1-color);
-  font-size: 34px;
+  font-size: 40px;
 }
 
 .navbar .container-fluid .nav-link {
@@ -108,9 +110,9 @@ body {
 .homepage .hero {
   background-color: var(--bg-color);
   height: calc(100vh - 77.8px);
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   background-image: url("assets/line 1.svg");
   background-position: center;
   background-size: contain;
@@ -159,6 +161,7 @@ body {
   line-height: 0.85;
   color: var(--text-color);
   position: relative;
+  z-index: 102;
 }
 
 @media (max-width: 992px) {
@@ -189,14 +192,14 @@ body {
   font-family: 'Futura Demi', sans-serif;
   font-style: italic;
   font-size: clamp(80px, 8.5vw, 200px);
-  color: #6B9B70;
+  color: var(--em4-color);
   font-weight: 700;
   position: relative;
   text-shadow: 10px 10px #6b9b7066;
   white-space: pre;
   z-index: 102;
-  overflow-wrap: break-word;
   right: 5px;
+  width: 52.35602vw;
 }
 
 @media (max-width: 992px) {
@@ -214,7 +217,7 @@ body {
 }
 
 .homepage .hero #title .container-2 .second-line #caret {
-  border-right: .05em solid #6B9B70;
+  border-right: 0.05em solid var(--em4-color);
   -webkit-animation: blink 1s steps(1) infinite;
           animation: blink 1s steps(1) infinite;
   margin-left: 15px;
@@ -226,6 +229,8 @@ body {
   font-size: clamp(35px, 3vw, 80px);
   margin-left: 8px;
   opacity: 1;
+  -webkit-animation: fade-in 2s ease 5.1s both;
+          animation: fade-in 2s ease 5.1s both;
   text-shadow: 0px 4px 4px #08162c36;
   z-index: 101;
 }
@@ -237,21 +242,25 @@ body {
       -ms-grid-row-align: start;
       align-self: start;
   margin: 0 2vw 0 5vw;
+  -webkit-animation: fade-in 2s ease 5.1s both;
+          animation: fade-in 2s ease 5.1s both;
   z-index: 400;
 }
 
 .homepage .hero #line1 {
   position: absolute;
   z-index: 50;
-  top: 20.64%;
-  width: 99vw;
+  top: 22.64%;
+  width: calc(100vw - 0.5em);
+  left: 0;
 }
 
 .homepage .hero #line2 {
   position: absolute;
   z-index: 51;
-  top: 27.365%;
-  width: 99vw;
+  top: 28.365%;
+  width: calc(100vw - 0.5em);
+  left: 0;
 }
 
 @-webkit-keyframes blink {
@@ -284,8 +293,122 @@ body {
   }
 }
 
-.homepage .footer {
+.homepage .about-catalyst .row h1 {
+  text-shadow: 5px 2px 4px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  font-family: 'Futura Bold';
+  font-size: 80px;
+  color: var(--old-bg-color);
+}
+
+.homepage .about-catalyst .row h2 {
+  text-shadow: 5px 2px 4px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  font-family: 'Futura Bold';
+  font-size: 66px;
+  color: var(--em4-color);
+}
+
+.homepage .about-catalyst .row-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 5vh 4.444444vw 5vh 5.763888vw;
+}
+
+.homepage .about-catalyst .row-1 .col {
+  text-align: center;
+}
+
+.homepage .about-catalyst .row-1 .column-1 .card {
+  padding: 5% 5% 3% 5%;
   background-color: var(--old-bg-color);
+  border-radius: 25px;
+  -webkit-box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.308);
+          box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.308);
+  margin-left: 5px;
+}
+
+.homepage .about-catalyst .row-1 .column-1 .card h4 {
+  color: var(--em3-color);
+  font-family: 'Futura Demi';
+  font-size: 35px;
+}
+
+.homepage .about-catalyst .row-1 .column-1 .card p {
+  font-size: 30px;
+  font-family: 'Futura Demi';
+  color: var(--bg-color);
+}
+
+.homepage .about-catalyst .row-1 .column-1 .card .definition {
+  font-size: 24px;
+  font-family: 'Futura Demi';
+  color: var(--bg-color);
+}
+
+.homepage .about-catalyst .row-1 .column-2 {
+  margin-left: 3.6805vw;
+}
+
+.homepage .about-catalyst .row-1 .column-2 p {
+  font-family: 'Futura Medium';
+  font-size: 40px;
+  text-align: center;
+}
+
+.homepage .about-catalyst .row-2 .column-3 {
+  padding: 5vh 0 5vh 5.3764367vw;
+}
+
+.homepage .about-catalyst .row-2 .column-3 ul li {
+  font-family: 'Futura Medium';
+  font-size: 40px;
+  text-align: start;
+  margin: 6px 0;
+  float: left;
+  clear: left;
+}
+
+.homepage .about-catalyst .row-2 .column-4 {
+  padding: 0;
+  padding-left: 30px;
+}
+
+.homepage .about-catalyst .row-3 {
+  bottom: 5vh;
+}
+
+.homepage .about-catalyst .row-3 .column-5 {
+  font-family: 'Futura Medium';
+  font-size: 40px;
+  color: var(--text-color);
+  text-align: center;
+  margin-left: 4vw;
+}
+
+.homepage .about-catalyst .row-3 .column-6 {
+  max-width: 35vw;
+  margin: 0 2.5vw 0 0vw;
+}
+
+.homepage .spacer {
+  aspect-ratio: 1000/150;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: null;
+}
+
+.homepage .layer1 {
+  background-image: url(../assets/layered-waves.svg);
 }
 
 .homepage .register {
@@ -305,6 +428,10 @@ body {
   font-weight: 700;
 }
 
+.homepage .register .date {
+  font-size: 50px;
+}
+
 @media screen and (min-width: 992px) {
   .homepage .register .date {
     height: 192px;
@@ -313,10 +440,8 @@ body {
   }
 }
 
-@media screen and (max-width: 992px) {
-  .homepage .register .date {
-    font-size: 50px;
-  }
+.homepage .register .time {
+  font-size: 40px;
 }
 
 @media screen and (min-width: 992px) {
@@ -327,10 +452,58 @@ body {
   }
 }
 
-@media screen and (max-width: 992px) {
-  .homepage .register .time {
-    font-size: 40px;
+@-webkit-keyframes colourChange {
+  33% {
+    fill: #215E4A;
   }
+  66% {
+    fill: #639685;
+  }
+  100% {
+    fill: #389576;
+  }
+}
+
+@keyframes colourChange {
+  33% {
+    fill: #215E4A;
+  }
+  66% {
+    fill: #639685;
+  }
+  100% {
+    fill: #389576;
+  }
+}
+
+.homepage .register #triangle-1 {
+  -webkit-animation: colourChange 3s steps(4) infinite forwards;
+          animation: colourChange 3s steps(4) infinite forwards;
+}
+
+.homepage .register #triangle-2 {
+  -webkit-animation: colourChange 3s 1s steps(4) infinite forwards;
+          animation: colourChange 3s 1s steps(4) infinite forwards;
+}
+
+.homepage .register #triangle-3 {
+  -webkit-animation: colourChange 3s 2s steps(4) infinite forwards;
+          animation: colourChange 3s 2s steps(4) infinite forwards;
+}
+
+.homepage .register #triangle-4 {
+  -webkit-animation: colourChange 3s steps(4) infinite forwards;
+          animation: colourChange 3s steps(4) infinite forwards;
+}
+
+.homepage .register #triangle-5 {
+  -webkit-animation: colourChange 3s 1s steps(4) infinite forwards;
+          animation: colourChange 3s 1s steps(4) infinite forwards;
+}
+
+.homepage .register #triangle-6 {
+  -webkit-animation: colourChange 3s 2s steps(4) infinite forwards;
+          animation: colourChange 3s 2s steps(4) infinite forwards;
 }
 
 .homepage .register button {
@@ -346,6 +519,7 @@ body {
   background-color: #08162C;
   border: 0;
   border-radius: 200px;
+  margin: 5vh 5vw !important;
 }
 
 .homepage .register button span {
@@ -381,5 +555,61 @@ body {
     font-size: calc(96px / 3);
     line-height: calc(123px / 3);
   }
+}
+
+.speakerspage .display-1 {
+  font-family: 'Futura Demi';
+}
+
+.speakerspage .container {
+  position: relative;
+  font-family: 'Futura Medium';
+  font-size: 18px;
+}
+
+.speakerspage .container h1 {
+  font-size: xx-large;
+}
+
+.speakerspage .container h2 {
+  font-size: xx-large;
+}
+
+.prismpage {
+  /* first part */
+}
+
+.prismpage .container {
+  background-color: var(--bg-color);
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+.prismpage .container1 {
+  position: center;
+}
+
+.prismpage .title {
+  font-family: 'Futura Bold Italic', sans-serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: clamp(80px, 8vw, 150px);
+  line-height: 0.85;
+  color: var(--em4-color);
+  text-align: center;
+  text-shadow: 6px 8px #6b9b7066;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  right: 5px;
+}
+
+.prismpage p {
+  font-family: 'Futura Medium';
+  font-size: 22px;
+  padding-right: 5%;
+}
+
+.registerpage {
+  color: inherit;
 }
 /*# sourceMappingURL=styles.css.map */
