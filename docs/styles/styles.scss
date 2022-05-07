@@ -279,7 +279,7 @@ $lg: 992px;
             line-height: 192px;
         }
         @media screen and (max-width: $lg) {
-            font-size: 50px;
+            font-size: calc(150px / 3);
         }
     }
 
@@ -291,51 +291,59 @@ $lg: 992px;
         }
 
         @media screen and (max-width: $lg) {
-            font-size: 40px;
+            font-size: calc(120px / 3);
         }
     }
 
-    button {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        background-color: #08162C;
-        border: 0;
-        border-radius: 200px;
-
-        span {
+    div {
+        button {
             display: flex;
             align-items: center;
+            justify-content: center;
+    
+            background-color: #08162C;
+            border: 0;
+            border-radius: 200px;
+    
+            span {
+                display: flex;
+                align-items: center;
+            }
+    
+    
+            @media screen and (min-width: $lg) {
+                height: 219px;
+                width: 644px;
+                
+                span {
+                    p {
+                        height: 123px;
+                        font-size: 96px;
+                        line-height: 123px;
+                    }
+                }
+            }
+            
+            @media screen and (max-width: $lg) {
+                height: calc(219px / 3);
+                width: calc(644px / 3);
+                
+                span {
+                    p {
+                        height : calc(123px / 3);
+                        font-size: calc(96px / 3);
+                        line-height: calc(123px / 3);
+                    }
+                }
+            }
         }
-
-
+        
         @media screen and (min-width: $lg) {
-            height: 219px;
-            width: 644px;
             margin: 133px 0px 65px 0px;
-
-            span {
-                p {
-                    height: 123px;
-                    font-size: 96px;
-                    line-height: 123px;
-                }
-            }
         }
-
+        
         @media screen and (max-width: $lg) {
-            height: calc(219px / 3);
-            width: calc(644px / 3);
             margin: calc(133px / 3) 0px calc(65px / 3) 0px;
-
-            span {
-                p {
-                    height : calc(123px / 3);
-                    font-size: calc(96px / 3);
-                    line-height: calc(123px / 3);
-                }
-            }
         }
     }
 }

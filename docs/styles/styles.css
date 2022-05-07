@@ -6,27 +6,27 @@
   src: url("../assets/fonts/Adelica Brush.ttf");
 }
 @font-face {
-  font-family: 'Futura Book';
+  font-family: "Futura Book";
   src: url("../assets/fonts/FuturaPTBook.otf");
 }
 @font-face {
-  font-family: 'Futura Medium';
+  font-family: "Futura Medium";
   src: url("../assets/fonts/FuturaPTMedium.otf");
 }
 @font-face {
-  font-family: 'Futura Demi';
+  font-family: "Futura Demi";
   src: url("../assets/fonts/FuturaPTDemi.otf");
 }
 @font-face {
-  font-family: 'Futura Bold';
+  font-family: "Futura Bold";
   src: url("../assets/fonts/FuturaPTBold.otf");
 }
 @font-face {
-  font-family: 'Futura Bold Italic';
+  font-family: "Futura Bold Italic";
   src: url("../assets/fonts/FuturaPTBoldOblique.otf") format("opentype");
 }
 @font-face {
-  font-family: 'Futura Heavy';
+  font-family: "Futura Heavy";
   src: url("../assets/fonts/FuturaPTHeavy.otf");
 }
 :root {
@@ -255,7 +255,7 @@ body {
     font-size: 40px;
   }
 }
-.register button {
+.register div button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -263,32 +263,40 @@ body {
   border: 0;
   border-radius: 200px;
 }
-.register button span {
+.register div button span {
   display: flex;
   align-items: center;
 }
 @media screen and (min-width: 992px) {
-  .register button {
+  .register div button {
     height: 219px;
     width: 644px;
-    margin: 133px 0px 65px 0px;
   }
-  .register button span p {
+  .register div button span p {
     height: 123px;
     font-size: 96px;
     line-height: 123px;
   }
 }
 @media screen and (max-width: 992px) {
-  .register button {
+  .register div button {
     height: 73px;
     width: 214.6666666667px;
-    margin: 44.3333333333px 0px 21.6666666667px 0px;
   }
-  .register button span p {
+  .register div button span p {
     height: 41px;
     font-size: 32px;
     line-height: 41px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .register div {
+    margin: 133px 0px 65px 0px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .register div {
+    margin: 44.3333333333px 0px 21.6666666667px 0px;
   }
 }
 
