@@ -7,32 +7,32 @@
 }
 
 @font-face {
-  font-family: "Futura Book";
+  font-family: 'Futura Book';
   src: url("../assets/fonts/FuturaPTBook.otf");
 }
 
 @font-face {
-  font-family: "Futura Medium";
+  font-family: 'Futura Medium';
   src: url("../assets/fonts/FuturaPTMedium.otf");
 }
 
 @font-face {
-  font-family: "Futura Demi";
+  font-family: 'Futura Demi';
   src: url("../assets/fonts/FuturaPTDemi.otf");
 }
 
 @font-face {
-  font-family: "Futura Bold";
+  font-family: 'Futura Bold';
   src: url("../assets/fonts/FuturaPTBold.otf");
 }
 
 @font-face {
-  font-family: "Futura Bold Italic";
+  font-family: 'Futura Bold Italic';
   src: url("../assets/fonts/FuturaPTBoldOblique.otf") format("opentype");
 }
 
 @font-face {
-  font-family: "Futura Heavy";
+  font-family: 'Futura Heavy';
   src: url("../assets/fonts/FuturaPTHeavy.otf");
 }
 
@@ -332,17 +332,10 @@ body {
     font-size: 40px;
   }
 }
-<<<<<<< HEAD
-.register div img {
-  width: 9.2592592593%;
-}
-.register div button {
-=======
 
 .homepage .register button {
   display: -webkit-box;
   display: -ms-flexbox;
->>>>>>> new-branch
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -354,14 +347,10 @@ body {
   border: 0;
   border-radius: 200px;
 }
-<<<<<<< HEAD
-.register div button span {
-=======
 
 .homepage .register button span {
   display: -webkit-box;
   display: -ms-flexbox;
->>>>>>> new-branch
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -369,19 +358,12 @@ body {
 }
 
 @media screen and (min-width: 992px) {
-<<<<<<< HEAD
-  .register div button {
-=======
   .homepage .register button {
->>>>>>> new-branch
     height: 219px;
     width: 644px;
+    margin: 133px 0px 65px 0px;
   }
-<<<<<<< HEAD
-  .register div button span p {
-=======
   .homepage .register button span p {
->>>>>>> new-branch
     height: 123px;
     font-size: 96px;
     line-height: 123px;
@@ -389,30 +371,6 @@ body {
 }
 
 @media screen and (max-width: 992px) {
-<<<<<<< HEAD
-  .register div button {
-    height: 73px;
-    width: 214.6666666667px;
-  }
-  .register div button span p {
-    height: 41px;
-    font-size: 32px;
-    line-height: 41px;
-  }
-}
-@media screen and (min-width: 992px) {
-  .register div {
-    margin: 133px 0px 65px 0px;
-  }
-}
-@media screen and (max-width: 992px) {
-  .register div {
-    margin: 44.3333333333px 0px 21.6666666667px 0px;
-  }
-}
-
-/*# sourceMappingURL=styles.css.map */
-=======
   .homepage .register button {
     height: calc(219px / 3);
     width: calc(644px / 3);
@@ -425,4 +383,3 @@ body {
   }
 }
 /*# sourceMappingURL=styles.css.map */
->>>>>>> new-branch
