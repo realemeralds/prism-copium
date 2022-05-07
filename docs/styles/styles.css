@@ -255,7 +255,10 @@ body {
     font-size: 40px;
   }
 }
-.register button {
+.register div img {
+  width: 9.2592592593%;
+}
+.register div button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -263,32 +266,40 @@ body {
   border: 0;
   border-radius: 200px;
 }
-.register button span {
+.register div button span {
   display: flex;
   align-items: center;
 }
 @media screen and (min-width: 992px) {
-  .register button {
+  .register div button {
     height: 219px;
     width: 644px;
-    margin: 133px 0px 65px 0px;
   }
-  .register button span p {
+  .register div button span p {
     height: 123px;
     font-size: 96px;
     line-height: 123px;
   }
 }
 @media screen and (max-width: 992px) {
-  .register button {
+  .register div button {
     height: 73px;
     width: 214.6666666667px;
-    margin: 44.3333333333px 0px 21.6666666667px 0px;
   }
-  .register button span p {
+  .register div button span p {
     height: 41px;
     font-size: 32px;
     line-height: 41px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .register div {
+    margin: 133px 0px 65px 0px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .register div {
+    margin: 44.3333333333px 0px 21.6666666667px 0px;
   }
 }
 
