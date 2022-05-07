@@ -6,6 +6,32 @@
     font-family: 'adelica brush';
     src: url('../assets/Adelica Brush.ttf');
 }
+/* New Fonts */
+@font-face {
+    font-family: 'Futura Book';
+    src: url('../../docs/assets/fonts/FuturaPTBook.otf');
+}
+@font-face {
+    font-family: 'Futura Medium';
+    src: url('../../docs/assets/fonts/FuturaPTMedium.otf');
+}
+@font-face {
+    font-family: 'Futura Demi';
+    src: url('../../docs/assets/fonts/FuturaPTDemi.otf');
+}
+@font-face {
+    font-family: 'Futura Bold';
+    src: url('../../docs/assets/fonts/FuturaPTBold.otf');
+}
+@font-face {
+    font-family: 'Futura Bold Italic';
+    src: url('../../docs/assets/fonts/FuturaPTBoldOblique.otf') format("opentype");
+}
+@font-face {
+    font-family: 'Futura Heavy';
+    src: url('../../docs/assets/fonts/FuturaPTHeavy.otf');
+}
+
 
 /* roboto mono autospace */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
@@ -26,7 +52,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Karla", sans-serif;
+    font-family: "Futura Demi", sans-serif;
+    
 }
 
 /* NAVBAR ELEMENTS */
@@ -66,14 +93,26 @@
     box-sizing: content-box;
 }
 
+.container1 {
+    position: center;
+}
 /* first part */
+
+
 .title {
+    font-family: 'Futura Bold Italic', sans-serif;
+    font-style: italic;
+    font-weight: 600;
+    font-size: clamp(80px, 8vw, 150px);
+    line-height: 0.85;
+    color: #6B9B70;
     text-align: center;
+    text-shadow: 6px 8px #6b9b7066;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    right: 5px;
 }
 
-.title h1 {
-    font-family: 'Cabin Sketch', cursive;
-    text-decoration: solid;
-    text-shadow: 10px 10px 4px #12503B;
-    color: white;
+p {
+    font-size: 20px;
 }
