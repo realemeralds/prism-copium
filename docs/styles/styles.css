@@ -2,40 +2,33 @@
 @import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@1,800&display=swap");
 /* cursive font */
 @font-face {
-  font-family: 'adelica brush';
+  font-family: "adelica brush";
   src: url("../assets/fonts/Adelica Brush.ttf");
 }
-
 @font-face {
-  font-family: 'Futura Book';
+  font-family: "Futura Book";
   src: url("../../docs/assets/fonts/FuturaPTBook.otf");
 }
-
 @font-face {
-  font-family: 'Futura Medium';
+  font-family: "Futura Medium";
   src: url("../../docs/assets/fonts/FuturaPTMedium.otf");
 }
-
 @font-face {
-  font-family: 'Futura Demi';
+  font-family: "Futura Demi";
   src: url("../../docs/assets/fonts/FuturaPTDemi.otf");
 }
-
 @font-face {
-  font-family: 'Futura Bold';
+  font-family: "Futura Bold";
   src: url("../../docs/assets/fonts/FuturaPTBold.otf");
 }
-
 @font-face {
-  font-family: 'Futura Bold Italic';
+  font-family: "Futura Bold Italic";
   src: url("../../docs/assets/fonts/FuturaPTBoldOblique.otf") format("opentype");
 }
-
 @font-face {
-  font-family: 'Futura Heavy';
+  font-family: "Futura Heavy";
   src: url("../../docs/assets/fonts/FuturaPTHeavy.otf");
 }
-
 :root {
   --old-bg-color: #215E4A;
   --bg-color: #FFFFFF;
@@ -59,8 +52,7 @@
 
 ::-webkit-scrollbar-track {
   background: #fbfbfb;
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-          box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
 
 body {
@@ -72,32 +64,27 @@ body {
 .navbar {
   background-color: var(--bg-color);
 }
-
 .navbar .container-fluid {
   padding: 0 2vw 0 2vw;
   width: 100%;
 }
-
 .navbar .container-fluid .navbar-brand {
-  font-family: 'Futura Bold Italic', sans-serif;
+  font-family: "Futura Bold Italic", sans-serif;
   color: var(--em1-color);
   font-size: 34px;
 }
-
 .navbar .container-fluid .nav-link {
   font-family: "adelica brush";
   margin: 0px 2.5%;
   font-size: 22px;
   color: var(--text-color);
 }
-
 .navbar .container-fluid .register {
   border-radius: 10px;
   background-color: var(--em2-color);
-  padding: 0.40em;
+  padding: 0.4em;
   position: relative;
 }
-
 .navbar .container-fluid .register .nav-link {
   position: relative;
   right: 2px;
@@ -107,70 +94,48 @@ body {
   background-color: var(--bg-color);
   height: calc(100vh - 200px);
 }
-
 .hero #title {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   top: 80px;
   margin-left: 7vw;
 }
-
 .hero #title .first-line {
-  font-family: 'Futura Medium', sans-serif;
+  font-family: "Futura Medium", sans-serif;
   font-weight: 400;
   font-size: 120px;
   line-height: 0.85;
   color: var(--text-color);
   position: relative;
-  width: -webkit-max-content;
-  width: -moz-max-content;
   width: max-content;
 }
-
 .hero #title .first-line #caret {
   border-right: 0.05em solid var(--text-color);
-  -webkit-animation: blink 1s steps(1) infinite;
-          animation: blink 1s steps(1) infinite;
+  animation: blink 1s steps(1) infinite;
   margin-left: 3px;
 }
-
 .hero #title .second-line {
-  font-family: 'Futura Demi', sans-serif;
+  font-family: "Futura Demi", sans-serif;
   font-style: italic;
   font-size: 120px;
   color: #6B9B70;
   font-weight: 700;
   position: relative;
-  text-shadow: 6px 8px #6b9b7066;
+  text-shadow: 6px 8px rgba(107, 155, 112, 0.4);
 }
-
 .hero #title .second-line #caret {
-  border-right: .05em solid #6B9B70;
-  -webkit-animation: blink 1s steps(1) infinite;
-          animation: blink 1s steps(1) infinite;
+  border-right: 0.05em solid #6B9B70;
+  animation: blink 1s steps(1) infinite;
   margin-left: 15px;
 }
-
 .hero #title .third-line {
   color: var(--text-color);
-  font-family: 'Futura Medium', sans-serif;
+  font-family: "Futura Medium", sans-serif;
   font-size: 48px;
   margin-left: 5px;
   opacity: 0;
-  -webkit-animation: fade-in 2s ease 5.1s forwards;
-          animation: fade-in 2s ease 5.1s forwards;
-}
-
-@-webkit-keyframes blink {
-  50% {
-    border-color: transparent;
-  }
+  animation: fade-in 2s ease 5.1s forwards;
 }
 
 @keyframes blink {
@@ -178,19 +143,11 @@ body {
     border-color: transparent;
   }
 }
-
-@-webkit-keyframes fade-in {
-  to {
-    opacity: 1;
-  }
-}
-
 @keyframes fade-in {
   to {
     opacity: 1;
   }
 }
-
 .layer1 {
   background-image: url(../assets/layered-waves.svg);
 }
@@ -204,7 +161,7 @@ body {
 
 .second-heading {
   color: #743C09;
-  font-family: 'Futura Medium', sans-serif;
+  font-family: "Futura Medium", sans-serif;
   font-size: 60px;
   font-weight: 800;
   text-shadow: 3px 3px rgba(128, 123, 122, 0.3);
@@ -218,21 +175,21 @@ body {
 }
 
 .social-heading {
-  font-family: 'Futura Medium', sans-serif;
+  font-family: "Futura Medium", sans-serif;
   font-weight: 700;
   font-size: 30px;
   color: #433202;
 }
 
 .social-subheading {
-  font-family: 'Futura Medium', sans-serif;
+  font-family: "Futura Medium", sans-serif;
   color: white;
   font-style: italic;
   font-size: 20px;
 }
 
 .social-text {
-  font-family: 'Futura Medium', sans-serif;
+  font-family: "Futura Medium", sans-serif;
   color: white !important;
   font-size: 16px;
 }
@@ -249,7 +206,7 @@ body {
 
 .img-2 {
   /* left: 60px;
-    top: 80px; */
+  top: 80px; */
   position: relative;
 }
 
@@ -279,4 +236,75 @@ body {
 .row-13 div {
   margin: 0px 2.5vw;
 }
+
+.register {
+  background-color: #B37A4C;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Futura Bold";
+  font-style: "normal";
+  font-weight: 700;
+}
+@media screen and (min-width: 992px) {
+  .register .date {
+    height: 192px;
+    font-size: 150px;
+    line-height: 192px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .register .date {
+    font-size: 50px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .register .time {
+    height: 154px;
+    font-size: 120px;
+    line-height: 154px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .register .time {
+    font-size: 40px;
+  }
+}
+.register button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #08162C;
+  border: 0;
+  border-radius: 200px;
+}
+.register button span {
+  display: flex;
+  align-items: center;
+}
+@media screen and (min-width: 992px) {
+  .register button {
+    height: 219px;
+    width: 644px;
+    margin: 133px 0px 65px 0px;
+  }
+  .register button span p {
+    height: 123px;
+    font-size: 96px;
+    line-height: 123px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .register button {
+    height: 73px;
+    width: 214.6666666667px;
+    margin: 44.3333333333px 0px 21.6666666667px 0px;
+  }
+  .register button span p {
+    height: 41px;
+    font-size: 32px;
+    line-height: 41px;
+  }
+}
+
 /*# sourceMappingURL=styles.css.map */
