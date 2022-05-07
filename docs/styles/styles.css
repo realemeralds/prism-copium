@@ -2,40 +2,33 @@
 @import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@1,800&display=swap");
 /* cursive font */
 @font-face {
-  font-family: 'adelica brush';
+  font-family: "adelica brush";
   src: url("../assets/fonts/Adelica Brush.ttf");
 }
-
 @font-face {
-  font-family: 'Futura Book';
+  font-family: "Futura Book";
   src: url("../../docs/assets/fonts/FuturaPTBook.otf");
 }
-
 @font-face {
-  font-family: 'Futura Medium';
+  font-family: "Futura Medium";
   src: url("../../docs/assets/fonts/FuturaPTMedium.otf");
 }
-
 @font-face {
-  font-family: 'Futura Demi';
+  font-family: "Futura Demi";
   src: url("../../docs/assets/fonts/FuturaPTDemi.otf");
 }
-
 @font-face {
-  font-family: 'Futura Bold';
+  font-family: "Futura Bold";
   src: url("../../docs/assets/fonts/FuturaPTBold.otf");
 }
-
 @font-face {
-  font-family: 'Futura Bold Italic';
+  font-family: "Futura Bold Italic";
   src: url("../../docs/assets/fonts/FuturaPTBoldOblique.otf") format("opentype");
 }
-
 @font-face {
-  font-family: 'Futura Heavy';
+  font-family: "Futura Heavy";
   src: url("../../docs/assets/fonts/FuturaPTHeavy.otf");
 }
-
 :root {
   --old-bg-color: #215E4A;
   --bg-color: #FFFFFF;
@@ -72,32 +65,27 @@ body {
 .navbar {
   background-color: var(--bg-color);
 }
-
 .navbar .container-fluid {
   padding: 0 2vw 0 2vw;
   width: 100%;
 }
-
 .navbar .container-fluid .navbar-brand {
-  font-family: 'Futura Bold Italic', sans-serif;
+  font-family: "Futura Bold Italic", sans-serif;
   color: var(--em1-color);
   font-size: 34px;
 }
-
 .navbar .container-fluid .nav-link {
   font-family: "adelica brush";
   margin: 0px 2.5%;
   font-size: 22px;
   color: var(--text-color);
 }
-
 .navbar .container-fluid .register {
   border-radius: 10px;
   background-color: var(--em2-color);
-  padding: 0.40em;
+  padding: 0.4em;
   position: relative;
 }
-
 .navbar .container-fluid .register .nav-link {
   position: relative;
   right: 2px;
@@ -110,11 +98,8 @@ body {
       -ms-flex-pack: start;
           justify-content: flex-start;
 }
-
 .hero #title {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -132,7 +117,7 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    width: 90vw !important;
+    width: 85.569vw !important;
     margin: 0 7vw;
   }
 }
@@ -165,8 +150,7 @@ body {
 
 .hero #title .container-fluid .first-line #caret {
   border-right: 0.05em solid var(--text-color);
-  -webkit-animation: blink 1s steps(1) infinite;
-          animation: blink 1s steps(1) infinite;
+  animation: blink 1s steps(1) infinite;
   margin-left: 3px;
 }
 
@@ -210,7 +194,6 @@ body {
           animation: blink 1s steps(1) infinite;
   margin-left: 15px;
 }
-
 .hero #title .third-line {
   color: var(--text-color);
   font-family: 'Futura Medium', sans-serif;
@@ -274,7 +257,7 @@ body {
 
 .second .second-heading {
   color: #743C09;
-  font-family: 'Futura Medium', sans-serif;
+  font-family: "Futura Medium", sans-serif;
   font-size: 60px;
   font-weight: 800;
   text-shadow: 3px 3px rgba(128, 123, 122, 0.3);
