@@ -637,8 +637,14 @@ body {
 
 .homepage .speaker-cards .speaker-card {
   height: 527px;
-  width: calc(527 / 1440 * 100%);
-  margin: calc(50 / 1440 * 100%);
+  width: 45vw;
+  margin: 5vh 5vw;
+}
+
+@media screen and (max-width: 992px) {
+  .homepage .speaker-cards .speaker-card {
+    width: calc(90% - clamp(30px, 10vw, 1000px));
+  }
 }
 
 .homepage .speaker-cards .speaker-card:hover .speaker-card-inner {
@@ -652,8 +658,8 @@ body {
   width: 100%;
   background-color: #8DCFF4;
   border-radius: 50px;
-  -webkit-box-shadow: 1px 1px 10px;
-          box-shadow: 1px 1px 10px;
+  -webkit-box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+          box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
   -webkit-transition: -webkit-transform 0.5s;
@@ -684,24 +690,44 @@ body {
 }
 
 .homepage .speaker-cards .speaker-card .speaker-card-inner .front img {
-  height: 288px;
-  width: 288px;
+  width: 67%;
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
+  border: 2px var(--em4-color) solid;
 }
 
 .homepage .speaker-cards .speaker-card .speaker-card-inner .front h2 {
   height: 63px;
-  font-size: 49px;
+  font-size: 60px;
   font-weight: 400;
   line-height: 63px;
+  margin-top: 2vh;
   text-align: center;
+}
+
+.homepage .speaker-cards .speaker-card .speaker-card-inner .front p {
+  text-align: center;
+  font-size: 22px;
+  padding: 0px 4%;
+  margin-top: -2vh;
 }
 
 .homepage .speaker-cards .speaker-card .speaker-card-inner .back {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  padding: 0 3%;
+}
+
+.homepage .speaker-cards .speaker-card .speaker-card-inner .back ul {
+  margin-top: 11%;
+}
+
+.homepage .speaker-cards .speaker-card .speaker-card-inner .back ul li {
+  font-size: 24px;
 }
 
 .homepage .speaker-cards .speaker-card .speaker-card-inner .back h5, .homepage .speaker-cards .speaker-card .speaker-card-inner .back p {
@@ -710,15 +736,16 @@ body {
 
 .homepage .speaker-cards .speaker-card .speaker-card-inner .back h5 {
   font-weight: 400;
-  font-size: 29px;
-  line-height: 37px;
+  font-size: 50px;
+  line-height: 1.2;
   color: #08162C;
+  margin-top: 5%;
 }
 
 .homepage .speaker-cards .speaker-card .speaker-card-inner .back p {
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 46px;
+  font-family: 'Futura Medium';
+  font-size: 32px;
+  line-height: 1;
   color: #08162C;
 }
 
