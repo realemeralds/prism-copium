@@ -158,17 +158,17 @@ $lg: 992px;
 .homepage {
     // SECTION 1 ELEMENTS
     overflow-x: hidden !important;
-    
+
     .cropper1 {
         z-index: 50;
         background-color: var(--bg-color);
         top: 0;
         right: 0;
-        bottom: -10%;
+        bottom: -50%;
         min-height: calc(100vh - 77.8px);
         width: 100vw;
         position: absolute;
-        animation: reveal-line 2s ease-in-out 6.4s forwards;
+        animation: reveal-line 2s ease-in-out 6.1s forwards;
     }
 
     .cropper2 {
@@ -176,11 +176,11 @@ $lg: 992px;
         background-color: var(--bg-color);
         top: 0;
         right: 0;
-        bottom: 0;
+        bottom: -50%;
         min-height: calc(100vh - 77.8px);
         width: 100vw;
         position: absolute;
-        animation: reveal-line 2s ease-in-out 6.1s forwards;
+        animation: reveal-line 2s ease-in-out 5.8s forwards;
     }
 
     @keyframes reveal-line {
@@ -360,7 +360,7 @@ $lg: 992px;
 
         #line3 {
             position: absolute !important;
-            z-index: 1;
+            z-index: 90;
             top: 7.5%;
             width: calc(100% - 0.5em);
             left: 0;
