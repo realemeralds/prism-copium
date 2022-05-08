@@ -24,6 +24,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     // main
+    // check for overflowing elements (to remove)
+    document.querySelectorAll('*').forEach(el => {
+        if (el.offsetWidth > document.documentElement.offsetWidth) {
+            console.log('Found the worst element ever: ', el);
+        }
+      });
+
     document.getElementById('welcome' + String(index + 1)).style.whiteSpace = 'pre'
     typeWriter(txt[index], 0, 'welcome' + String(index + 1), () => {
         typeWriter(txt[index], 0, 'welcome' + String(index + 1), null);
