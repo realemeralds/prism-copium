@@ -392,12 +392,6 @@ body {
   margin-left: 0;
 }
 
-@media screen and (max-width: 992px) {
-  .homepage .about-catalyst .row-2 ::before {
-    content: "---------------------------------";
-  }
-}
-
 .homepage .about-catalyst .row-2 .column-3 {
   padding: 7vh 2vw 5vh 5.3764367vw;
 }
