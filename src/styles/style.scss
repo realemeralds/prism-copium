@@ -600,9 +600,9 @@ $lg: 992px;
                     }
                 }
             }
-
         }
-      
+    }
+
     .simplespacer {
         aspect-ratio: 1451 / 101;
         width: 100%;
@@ -631,7 +631,7 @@ $lg: 992px;
         .prompt {
             font-size: 160px;
             @media screen and (max-width: 768px) {
-                font-size: clamp(30px, calc(11vw+20px), 90px);
+                font-size: clamp(30px, calc(11vw + 20px), 90px);
             }
             font-family: 'Futura Bold Italic';
             color: var(--text-color);
@@ -642,7 +642,7 @@ $lg: 992px;
             // white-space: pre;
             font-size: 115px;
             @media screen and (max-width: 768px) {
-                font-size: clamp(30px, calc(8vw+20px), 60px);
+                font-size: clamp(30px, calc(8vw + 20px), 60px);
             }
             color: var(--bg-color); 
             text-align: center;
@@ -652,7 +652,7 @@ $lg: 992px;
             overflow-x: visible;
             span {
                 @media screen and (max-width: 768px) {
-                    font-size: clamp(30px, calc(10vw+20px), 70px);
+                    font-size: clamp(30px, calc(10vw + 20px), 70px);
                 }
                 font-size: 130px;
                 position: relative;
