@@ -445,6 +445,8 @@ $lg: 992px;
         }
 
         button {
+            margin: 5vh 5vw !important;
+
             display: flex;
             align-items: center;
             justify-content: center;
@@ -486,7 +488,6 @@ $lg: 992px;
                     }
                 }
             }
-            margin: 5vh 5vw !important;
         }
     }
 }
