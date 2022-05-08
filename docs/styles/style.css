@@ -113,13 +113,44 @@ body {
   position: relative;
 }
 
+.navbar .container-fluid .navbar-toggler {
+  border: 0px solid white !important;
+  -webkit-box-shadow: 0 0 0 0.25rem var(--text) !important;
+          box-shadow: 0 0 0 0.25rem var(--text) !important;
+}
+
+.navbar .container-fluid .navbar-toggler span {
+  padding: 22px 25px 25px 25px;
+  width: 40px;
+  border: var(--text-color) 3px solid;
+  border-width: 3px;
+  border-radius: 4px;
+  color: var(--text-color);
+  position: relative;
+  -webkit-transition: border-width .15s ease-in-out;
+  transition: border-width .15s ease-in-out;
+  -webkit-transition-property: border-width;
+  transition-property: border-width;
+  -webkit-transition-duration: 0.15s;
+          transition-duration: 0.15s;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+.navbar .container-fluid .navbar-toggler span:focus {
+  border-width: 8px;
+}
+
 .homepage {
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
 
 .homepage .hero {
   background-color: var(--bg-color);
   height: 100%;
+  min-height: calc(100vh - 77.8px);
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -141,7 +172,7 @@ body {
       -ms-flex-pack: start;
           justify-content: start;
   margin-left: 5.890804vw;
-  height: calc(100% + 10vh);
+  z-index: 3000;
 }
 
 @media (max-width: 992px) {
@@ -221,7 +252,6 @@ body {
     width: min-content;
     padding-right: calc(15px + 0.5em);
     white-space: pre;
-    z-index: 102;
   }
 }
 
@@ -251,9 +281,9 @@ body {
       -ms-grid-row-align: start;
       align-self: start;
   margin: 0 2vw 0 5vw;
+  z-index: 400;
   -webkit-animation: fade-in 2s ease 5.1s both;
           animation: fade-in 2s ease 5.1s both;
-  z-index: 400;
 }
 
 .homepage .hero #line1 {
@@ -268,6 +298,13 @@ body {
   position: absolute;
   z-index: 51;
   top: 28.365%;
+  width: calc(100% - 0.5em);
+  left: 0;
+}
+
+.homepage .hero #line3 {
+  position: absolute !important;
+  top: 10%;
   width: calc(100% - 0.5em);
   left: 0;
 }
@@ -302,6 +339,10 @@ body {
   }
 }
 
+.homepage .about-catalyst .row {
+  margin-left: 0;
+}
+
 .homepage .about-catalyst .row h1 {
   text-shadow: 5px 2px 4px rgba(0, 0, 0, 0.25);
   text-align: center;
@@ -309,6 +350,12 @@ body {
   font-size: 90px;
   color: var(--old-bg-color);
   padding-right: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .homepage .about-catalyst .row h1 {
+    font-size: 60px;
+  }
 }
 
 .homepage .about-catalyst .row h2 {
@@ -331,6 +378,19 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 5vh 3vw 5vh 6vw;
+}
+
+@media screen and (max-width: 768px) {
+  .homepage .about-catalyst .row-1 {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 431px) {
+  .homepage .about-catalyst .row-1 {
+    margin-left: 0;
+    padding-top: 0.5rem;
+  }
 }
 
 .homepage .about-catalyst .row-1 .col {
@@ -434,6 +494,15 @@ body {
   }
 }
 
+@media screen and (max-width: 992px) {
+  .homepage .about-catalyst .row-2 .column-3 ul li:nth-child(3) {
+    font-size: 30px;
+    list-style-type: none;
+    text-align: center;
+    margin-bottom: 0;
+  }
+}
+
 .homepage .about-catalyst .row-2 .column-4 {
   padding: 0;
   position: relative;
@@ -444,10 +513,6 @@ body {
   width: 40vw;
   display: block;
   margin-left: auto;
-}
-
-.homepage .about-catalyst .row-3 {
-  bottom: 5vh;
 }
 
 .homepage .about-catalyst .row-3 .column-5 {
@@ -466,8 +531,11 @@ body {
   }
 }
 
-.homepage .about-catalyst .row-3 .column-5 p {
-  margin-top: 20px;
+@media screen and (min-width: 992px) {
+  .homepage .about-catalyst .row-3 .column-5 p {
+    margin-top: 10%;
+    font-size: clamp(40px, 2.2vw, 150px);
+  }
 }
 
 .homepage .about-catalyst .row-3 .column-6 {
@@ -524,6 +592,12 @@ body {
   margin-bottom: 7vh;
 }
 
+@media screen and (max-width: 768px) {
+  .homepage .register-section .prompt {
+    font-size: clamp(30px, calc(11vw+20px), 90px);
+  }
+}
+
 .homepage .register-section .datetime {
   font-size: 115px;
   color: var(--bg-color);
@@ -534,11 +608,23 @@ body {
   overflow-x: visible;
 }
 
+@media screen and (max-width: 768px) {
+  .homepage .register-section .datetime {
+    font-size: clamp(30px, calc(8vw+20px), 60px);
+  }
+}
+
 .homepage .register-section .datetime span {
   font-size: 130px;
   position: relative;
   top: 0.5vh;
   font-family: 'Futura Bold';
+}
+
+@media screen and (max-width: 768px) {
+  .homepage .register-section .datetime span {
+    font-size: clamp(30px, calc(10vw+20px), 70px);
+  }
 }
 
 @-webkit-keyframes colourChange {
@@ -624,9 +710,10 @@ body {
   background-color: #08162C;
   border: 0;
   border-radius: 200px;
-  height: 219px;
-  width: 644px;
-  margin: 133px 0px 65px 0px;
+  height: auto;
+  width: clamp(200px, 40vw, 800px);
+  margin: 6.5482vw 0px 2.688vw 0px;
+  padding: 1.7026vw;
 }
 
 .homepage .register-section .register-container button span {
@@ -639,9 +726,9 @@ body {
 }
 
 .homepage .register-section .register-container button span p {
-  height: 123px;
-  font-size: 96px;
-  line-height: 123px;
+  height: clamp(30px, 15.47169vw, 123px);
+  font-size: clamp(30px, 8.26vw, 85px);
+  line-height: clamp(30px, 15.47169vw, 123px);
 }
 
 .speakerspage .display-1 {

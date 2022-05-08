@@ -10,6 +10,8 @@
     <!-- css -->
     <link rel="stylesheet" href="styles/style.css">
 
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!-- js -->
     <script defer src="scripts/scrollanimation.js"></script>
 
@@ -30,8 +32,8 @@
     <div class="navbar navbar-expand-lg sticky-top">
         <div class="container-fluid">
             <a class="navbar-brand py-1 position-relative" href="">Catalyst 2022</a>
-            <button class="navbar-toggler" data-bs-target="#nav" data-bs-toggle="collapse">
-                <span class="navbar-toggler-icon">
+            <button class="navbar-toggler navbar-light" data-bs-target="#nav" data-bs-toggle="collapse">
+                <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="nav">
                 <div class="navbar-nav d-flex justify-content-end w-100">
@@ -50,8 +52,8 @@
     <!-- 1st section -->
     <div class="hero container-fluid w-100 d-flex g-0 m-0">
         <div class="cropped">
-            <img id="line1" src="assets/line 1.png" alt="wavy line">
-            <img id="line2" src="assets/line 2.png" alt="wavy line">
+            <img id="line1" src="assets/line 1.svg" alt="wavy line">
+            <img id="line2" src="assets/line 2.svg" alt="wavy line">
         </div>
 
         <div id="title">
@@ -61,10 +63,7 @@
                 </h1>
             </div>
             <div class="container-fluid d-flex g-0 container-2">
-                <h1 class="second-line" id="welcome2">
-                    ​ 
-                    <!-- zero width space above -->
-                </h1>
+                <h1 class="second-line" id="welcome2">​</h1>
                 <span id="caret">​</span>
             </div>
             <h4 class="third-line d-lg-block d-none">
@@ -76,7 +75,8 @@
         </div>
     </div>
 
-    <div class="about-catalyst">
+    <div class="about-catalyst position-relative">
+        <!-- <img id="line3" src="assets/line 3.svg" alt="wavy line"> -->
         <div class="row w-100 p-0">
             <h1>About Catalyst</h1>
         </div>
@@ -132,7 +132,7 @@
         </div>
 
         <div class="row row-3 w-100 p-0 position-relative">
-            <div class="col d-flex align-items-center column-5 align-center align-items-center">
+            <div class="col d-flex align-items-start column-5 align-center">
                 <p>That’s our theme for this year!
                     We hope that anyone who joins will leave with a much greater appreciation for the environment, and have the tools necessary to turn their willpower into change for the wider community.</p>
             </div>
@@ -148,16 +148,16 @@
         <h1 class="text-center prompt">register today!</h1>
         <p class="datetime"><span><b>27 May</b></span><br>4.30pm - 6.30pm<br>LT3, 38 Malcolm Road</p>
         <div class="d-flex align-items-center justify-content-center register-container">
-            <div class="svg-container">
-                <img src="./assets/new left arrow.svg" style="width: calc(50vw -  422px);">         
+            <div class="svg-container d-none d-lg-block">
+                <img src="./assets/new left arrow.svg" style="width: 20vw;">         
             </div>   
             <button>
                 <span>
                     <p class="text-center text-white m-0">REGISTER</p>
                 </span>
             </button>
-            <div class="svg-container">
-                <img src="./assets/new right arrow.svg" style="width: calc(50vw -  422px);">
+            <div class="svg-container d-none d-lg-block">
+                <img src="./assets/new right arrow.svg" style="width: 20vw;">
             </div>
         </div>
     </div>
