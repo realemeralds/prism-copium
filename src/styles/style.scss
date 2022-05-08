@@ -493,6 +493,116 @@ $lg: 992px;
         background-image: url(../assets/layered-waves.svg);
     }
 
+    // speaker cards
+    .speaker-cards {
+        font-family: 'Futura Demi';
+        font-style: normal;
+
+        h1 {
+            height: 141px;
+
+            font-size: 110px;
+            font-weight: 700;
+            line-height: 141px;
+
+            color: #215E4A;
+
+            text-shadow: 5px 0px 4px #000000;
+        }
+
+        h6 {
+            height: 46px;
+
+            font-size: 36px;
+            font-weight: 400;
+            line-height: 46px;
+
+            color: #08162C;
+        }
+
+        .speaker-card {
+            height: 527px;
+            width: calc(527 / 1440 * 100%);
+            margin: calc(50 / 1440 * 100%);
+            
+            &:hover .speaker-card-inner {
+                transform: rotateY(180deg);
+            }
+
+            .speaker-card-inner {
+                position: relative;
+                height: 100%;
+                width: 100%;
+
+                background-color: #8DCFF4;
+                border-radius: 50px;
+                box-shadow: 1px 1px 10px;
+    
+                transform-style: preserve-3d;
+                transition: transform 0.5s;
+    
+    
+                .front, .back {
+                    height: 100%;
+                    width: 100%;
+    
+                    position: absolute;
+                    display: flex;
+    
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-evenly;
+    
+                    backface-visibility: hidden;
+                }
+    
+                .front {
+                    img {
+                        height: 288px;
+                        width: 288px;
+        
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+    
+                    h2 {
+                        height: 63px;
+                        
+                        font-size: 49px;
+                        font-weight: 400;
+                        line-height: 63px;
+
+                        text-align: center;
+                    }
+                }
+    
+                .back {
+                    transform: rotateY(180deg);
+                    
+                    h5, p {
+                        text-align: center;
+                    }
+
+                    h5 {
+                        font-weight: 400;
+                        font-size: 29px;
+                        line-height: 37px;
+
+                        color: #08162C;
+                    }
+
+                    p {    
+                        font-weight: 400;
+                        font-size: 36px;
+                        line-height: 46px;
+                        
+                        color: #08162C;
+                    }
+                }
+            }
+
+        }
+      
     .simplespacer {
         aspect-ratio: 1451 / 101;
         width: 100%;
