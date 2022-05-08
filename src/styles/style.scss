@@ -50,6 +50,7 @@ $lg: 992px;
     --em2-color: #EFB79D; // beige
     --em3-color: #AFF1BD;
     --em4-color: #6B9B70;
+    --em5-color: #215E4A;
     --secondary-color: green;
 }
 
@@ -494,20 +495,97 @@ $lg: 992px;
 
 .speakerspage {
     .display-1 {
-        font-family: 'Futura Demi';
+        font-family: 'Futura Bold';
+        color: var(--text-color);
+        font-size: clamp(100px, calc(1.625rem + 4.5vw), 1000px);
+        @media screen and (min-width: 1200px) {
+            font-size: 110px !important
+        }
     }
 
     .container {
         position: relative;
         font-family: 'Futura Medium';
-        font-size: 18px;
+        font-size: 22px;
+
+        @media screen and (max-width: 992px) {
+            padding: 3vw;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
         
+        @media screen and (max-width: 768px) {
+            margin-top: 1rem !important;
+        }
+
+        @media screen and (max-width: 576px) {
+            width: 80vw !important;
+        }
+
         h1 {
-            font-size: xx-large
+            font-size: 80px;
         }
         
         h2 {
-            font-size: xx-large
+            font-size: 48px;
+        }
+
+
+        p {
+            line-height: 1.5;
+            @media screen and (max-width: 768px) {
+                width: 85vw !important;
+                margin: 0 7.5vw;
+            }
+        }
+        .mt-5 {
+            margin-top: 4rem !important;
+            @media screen and (max-width: 768px) {
+                margin-top: 2rem !important
+            }
+        }
+
+
+        .centered-element {
+            align-items: center;
+
+            @media screen and (min-width: 768px) {
+                margin-left: 2vw;
+            }
+            
+            h2 {
+                @media screen and (max-width: 992px) {
+                    text-align: center;
+                    align-self: center;
+                    justify-self: center;
+                    font-size: 60px;
+                    margin-left: 0 !important;
+                }
+
+                @media screen and (max-width: 768px) {
+                    margin: 0 !important;
+                    padding: 0 !important;
+                    text-align: center;
+                    align-self: center;
+                    justify-self: center;
+                    font-size: 70px;
+                }
+            }
+
+            .image-container {
+                margin-right: 5vw;
+
+                img {
+                    height: 100%;
+                    border: var(--em1-color) 2px solid;
+            }
+
+            }
+            p {
+                line-height: 1.3;
+            }
         }
     }    
 }
