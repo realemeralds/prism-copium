@@ -358,11 +358,6 @@ $lg: 992px;
         .row-2 {
             justify-content: space-between;
             margin-left: 0;
-            @media screen and (max-width: $lg) {
-                ::before {
-                    content: "---------------------------------"
-                }
-            }
             .column-3 {
                 padding: 7vh 2vw 5vh 5.3764367vw;
                 @media screen and (max-width: $lg) {
