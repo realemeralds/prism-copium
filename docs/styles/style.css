@@ -688,7 +688,6 @@ body {
           justify-content: space-evenly;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
-  margin-top: 15px; 
 }
 
 .homepage .speaker-cards .speaker-card .speaker-card-inner .front img {
@@ -697,11 +696,12 @@ body {
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
+  margin-top: 15px;
 }
 
 .homepage .speaker-cards .speaker-card .speaker-card-inner .front h2 {
   height: 63px;
-  margin-top: 2vh;
+  margin-top: 1vh;
   font-size: 60px;
   font-weight: 400;
   line-height: 63px;
@@ -710,7 +710,7 @@ body {
 
 .homepage .speaker-cards .speaker-card .speaker-card-inner .front p {
   padding: 0px 4%;
-  margin-top: -2vh;
+  margin-top: -1vh;
   font-size: 22px;
   text-align: center;
   margin-bottom: 2vh;
