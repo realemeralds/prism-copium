@@ -89,28 +89,28 @@ body {
 }
 
 .navbar .container-fluid {
-  padding: 0 2vw 0 2vw;
   width: 100%;
+  padding: 0 2vw 0 2vw;
 }
 
 .navbar .container-fluid .navbar-brand {
   font-family: 'Futura Bold Italic', sans-serif;
-  color: var(--em1-color);
   font-size: 40px;
+  color: var(--em1-color);
 }
 
 .navbar .container-fluid .nav-link {
-  font-family: "adelica brush";
   margin: 0px 2.5%;
+  font-family: "adelica brush";
   font-size: 22px;
   color: var(--text-color);
 }
 
 .navbar .container-fluid .register {
-  border-radius: 10px;
-  background-color: var(--em2-color);
-  padding: 0.4em;
   position: relative;
+  padding: 0.4em;
+  background-color: var(--em2-color);
+  border-radius: 10px;
 }
 
 .navbar .container-fluid .navbar-toggler {
@@ -120,23 +120,23 @@ body {
 }
 
 .navbar .container-fluid .navbar-toggler span {
+  position: relative;
   padding: 22px 25px 25px 25px;
   width: 40px;
   border: var(--text-color) 3px solid;
   border-width: 3px;
   border-radius: 4px;
   color: var(--text-color);
-  position: relative;
   -webkit-transition: border-width .15s ease-in-out;
   transition: border-width .15s ease-in-out;
-  -webkit-transition-property: border-width;
-  transition-property: border-width;
-  -webkit-transition-duration: 0.15s;
-          transition-duration: 0.15s;
-  -webkit-transition-timing-function: ease-in-out;
-          transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
           transition-delay: 0s;
+  -webkit-transition-duration: 0.15s;
+          transition-duration: 0.15s;
+  -webkit-transition-property: border-width;
+  transition-property: border-width;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
 }
 
 .navbar .container-fluid .navbar-toggler span:focus {
@@ -148,29 +148,29 @@ body {
 }
 
 .homepage .cropper1 {
-  z-index: 50;
-  background-color: var(--bg-color);
+  position: absolute;
   top: 0;
   right: 0;
   bottom: -50%;
   min-height: calc(100vh - 77.8px);
   width: 100vw;
-  position: absolute;
+  background-color: var(--bg-color);
   -webkit-animation: reveal-line 2s ease-in-out 6.1s forwards;
           animation: reveal-line 2s ease-in-out 6.1s forwards;
+  z-index: 50;
 }
 
 .homepage .cropper2 {
-  z-index: 70;
-  background-color: var(--bg-color);
+  position: absolute;
   top: 0;
   right: 0;
   bottom: -50%;
   min-height: calc(100vh - 77.8px);
   width: 100vw;
-  position: absolute;
+  background-color: var(--bg-color);
   -webkit-animation: reveal-line 2s ease-in-out 5.8s forwards;
           animation: reveal-line 2s ease-in-out 5.8s forwards;
+  z-index: 70;
 }
 
 @-webkit-keyframes reveal-line {
@@ -186,28 +186,28 @@ body {
 }
 
 .homepage .hero {
-  background-color: var(--bg-color);
+  position: relative;
   height: 100%;
   min-height: calc(100vh - 77.8px);
+  padding-top: 10vh;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  background-color: var(--bg-color);
   background-position: center;
   background-size: contain;
-  position: relative;
-  padding-top: 10vh;
 }
 
 .homepage .hero .container #earth {
   width: 33vw;
-  border-radius: 50%;
+  margin: 0 2vw 0 5vw;
   -ms-flex-item-align: start;
       -ms-grid-row-align: start;
       align-self: start;
-  margin: 0 2vw 0 5vw;
-  z-index: 990;
+  border-radius: 50%;
   -webkit-animation: fade-in 2s ease 5.1s both;
           animation: fade-in 2s ease 5.1s both;
+  z-index: 990;
 }
 
 .homepage .hero #line1 {
@@ -220,14 +220,15 @@ body {
 
 .homepage .hero #line2 {
   position: absolute;
-  z-index: 60;
   top: 28.365%;
-  width: calc(100% - 0.5em);
   left: 0;
+  width: calc(100% - 0.5em);
+  z-index: 60;
 }
 
 .homepage .hero #title {
   position: relative;
+  margin-left: 5.890804vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -238,43 +239,42 @@ body {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
-  margin-left: 5.890804vw;
   z-index: 990;
 }
 
 @media (max-width: 992px) {
   .homepage .hero #title {
+    width: 85.569vw !important;
+    margin: 0 7vw;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    width: 85.569vw !important;
-    margin: 0 7vw;
   }
 }
 
 @media (max-width: 992px) {
   .homepage .hero #title .container-fluid {
+    width: 85.569vw !important;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    width: 85.569vw !important;
   }
 }
 
 .homepage .hero #title .container-fluid .first-line {
+  position: relative;
   font-family: 'Futura Medium', sans-serif;
   font-weight: 400;
   font-size: clamp(80px, 8vw, 150px);
   line-height: 0.85;
   color: var(--text-color);
-  position: relative;
   z-index: 102;
 }
 
 @media (max-width: 992px) {
   .homepage .hero #title .container-fluid .first-line {
-    text-align: center;
     font-size: 13vw;
+    text-align: center;
     z-index: 1;
   }
 }
@@ -330,14 +330,14 @@ body {
 }
 
 .homepage .hero #title .third-line {
-  color: var(--text-color);
+  margin-left: 8px;
   font-family: 'Futura Medium', sans-serif;
   font-size: clamp(35px, 3vw, 80px);
-  margin-left: 8px;
+  color: var(--text-color);
   opacity: 1;
+  text-shadow: 0px 4px 4px #08162c36;
   -webkit-animation: fade-in 2s ease 5.1s both;
           animation: fade-in 2s ease 5.1s both;
-  text-shadow: 0px 4px 4px #08162c36;
   z-index: 101;
 }
 
@@ -376,12 +376,12 @@ body {
 }
 
 .homepage .about-catalyst .row h1 {
-  text-shadow: 5px 2px 4px rgba(0, 0, 0, 0.25);
-  text-align: center;
+  padding-right: 0;
   font-family: 'Futura Bold';
   font-size: 90px;
   color: var(--old-bg-color);
-  padding-right: 0;
+  text-align: center;
+  text-shadow: 5px 2px 4px rgba(0, 0, 0, 0.25);
   z-index: 100;
 }
 
@@ -392,25 +392,25 @@ body {
 }
 
 .homepage .about-catalyst .row h2 {
-  text-shadow: 5px 2px 4px rgba(0, 0, 0, 0.25);
-  text-align: center;
+  padding-right: 0;
   font-family: 'Futura Bold';
   font-size: 80px;
   color: var(--em4-color);
-  padding-right: 0;
+  text-align: center;
+  text-shadow: 5px 2px 4px rgba(0, 0, 0, 0.25);
   z-index: 991;
 }
 
 .homepage .about-catalyst #line3 {
   position: absolute !important;
-  z-index: 90;
   top: 7.5%;
-  width: calc(100% - 0.5em);
   left: 0;
+  width: calc(100% - 0.5em);
+  z-index: 90;
 }
 
 .homepage .about-catalyst .row-1 {
-  z-index: 990;
+  padding: 5vh 3vw 5vh 6vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -420,7 +420,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 5vh 3vw 5vh 6vw;
+  z-index: 990;
 }
 
 @media screen and (max-width: 768px) {
@@ -445,37 +445,37 @@ body {
 }
 
 .homepage .about-catalyst .row-1 .column-1 .card {
+  margin-right: 26px;
   padding: 17px 5px 8px 5px;
   background-color: var(--old-bg-color);
   border-radius: 25px;
   -webkit-box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.308);
           box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.308);
-  margin-right: 26px;
   z-index: 991;
 }
 
 .homepage .about-catalyst .row-1 .column-1 .card h4 {
-  color: var(--em3-color);
+  padding-bottom: 5px;
   font-family: 'Futura Demi';
   font-size: 35px;
   line-height: 1;
-  padding-bottom: 5px;
+  color: var(--em3-color);
   white-space: pre-wrap;
   word-break: normal;
   overflow: visible;
 }
 
 .homepage .about-catalyst .row-1 .column-1 .card p {
-  font-size: 30px;
-  font-family: 'Futura Demi';
-  color: var(--bg-color);
-  line-height: 1.3;
   padding: 0px 8px;
+  font-family: 'Futura Demi';
+  font-size: 30px;
+  line-height: 1.3;
+  color: var(--bg-color);
 }
 
 .homepage .about-catalyst .row-1 .column-1 .card .definition {
-  font-size: 24px;
   font-family: 'Futura Demi';
+  font-size: 24px;
   color: var(--bg-color);
 }
 
@@ -499,10 +499,10 @@ body {
 }
 
 .homepage .about-catalyst .row-2 {
+  margin-left: 0;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-left: 0;
 }
 
 .homepage .about-catalyst .row-2 .column-3 {
@@ -524,67 +524,67 @@ body {
 }
 
 .homepage .about-catalyst .row-2 .column-3 ul li {
+  margin: 10px 0;
   font-family: 'Futura Medium';
   font-size: 40px;
-  text-align: start;
-  margin: 10px 0;
   line-height: 1.3;
+  text-align: start;
 }
 
 @media screen and (max-width: 992px) {
   .homepage .about-catalyst .row-2 .column-3 ul li {
+    margin: 7vh 0;
     font-size: 30px;
     list-style-type: none;
     text-align: center;
-    margin: 7vh 0;
   }
 }
 
 @media screen and (max-width: 992px) {
   .homepage .about-catalyst .row-2 .column-3 ul li:nth-child(3) {
+    margin-bottom: 0;
     font-size: 30px;
     list-style-type: none;
     text-align: center;
-    margin-bottom: 0;
   }
 }
 
 .homepage .about-catalyst .row-2 .column-4 {
-  padding: 0;
   position: relative;
   bottom: 8vh;
+  padding: 0;
 }
 
 .homepage .about-catalyst .row-2 .column-4 img {
   width: 40vw;
-  display: block;
   margin-left: auto;
+  display: block;
   z-index: 991;
 }
 
 .homepage .about-catalyst #line4 {
   position: absolute !important;
-  z-index: 1;
   top: 55%;
-  width: calc(100% - 0.5em);
   left: 0;
+  width: calc(100% - 0.5em);
+  z-index: 1;
 }
 
 .homepage .about-catalyst .row-3 .column-5 {
+  margin-left: 4vw;
   font-family: 'Futura Medium';
   font-size: 40px;
+  line-height: 1.4;
   color: var(--text-color);
   text-align: center;
-  margin-left: 4vw;
-  line-height: 1.4;
   z-index: 991;
 }
 
 @media screen and (max-width: 992px) {
   .homepage .about-catalyst .row-3 .column-5 {
+    margin: 0 1vw;
     font-size: 30px;
     line-height: 1.3;
-    margin: 0 1vw;
   }
 }
 
@@ -604,8 +604,8 @@ body {
 .homepage .spacer {
   aspect-ratio: 1000/150;
   width: 100%;
-  background-repeat: no-repeat;
   background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
 }
 
@@ -668,7 +668,8 @@ body {
   transition: transform 0.5s, -webkit-transform 0.5s;
 }
 
-.homepage .speaker-cards .speaker-card .speaker-card-inner .front, .homepage .speaker-cards .speaker-card .speaker-card-inner .back {
+.homepage .speaker-cards .speaker-card .speaker-card-inner .front,
+.homepage .speaker-cards .speaker-card .speaker-card-inner .back {
   height: 100%;
   width: 100%;
   position: absolute;
@@ -691,35 +692,35 @@ body {
 
 .homepage .speaker-cards .speaker-card .speaker-card-inner .front img {
   width: 67%;
+  border: 2px var(--em4-color) solid;
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
-  border: 2px var(--em4-color) solid;
 }
 
 .homepage .speaker-cards .speaker-card .speaker-card-inner .front h2 {
   height: 63px;
+  margin-top: 2vh;
   font-size: 60px;
   font-weight: 400;
   line-height: 63px;
-  margin-top: 2vh;
   text-align: center;
 }
 
 .homepage .speaker-cards .speaker-card .speaker-card-inner .front p {
-  text-align: center;
-  font-size: 22px;
   padding: 0px 4%;
   margin-top: -2vh;
+  font-size: 22px;
+  text-align: center;
 }
 
 .homepage .speaker-cards .speaker-card .speaker-card-inner .back {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
+  padding: 0 3%;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
-  padding: 0 3%;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
 }
 
 .homepage .speaker-cards .speaker-card .speaker-card-inner .back ul {
@@ -730,16 +731,17 @@ body {
   font-size: 24px;
 }
 
-.homepage .speaker-cards .speaker-card .speaker-card-inner .back h5, .homepage .speaker-cards .speaker-card .speaker-card-inner .back p {
+.homepage .speaker-cards .speaker-card .speaker-card-inner .back h5,
+.homepage .speaker-cards .speaker-card .speaker-card-inner .back p {
   text-align: center;
 }
 
 .homepage .speaker-cards .speaker-card .speaker-card-inner .back h5 {
+  margin-top: 5%;
   font-weight: 400;
   font-size: 50px;
   line-height: 1.2;
   color: #08162C;
-  margin-top: 5%;
 }
 
 .homepage .speaker-cards .speaker-card .speaker-card-inner .back p {
@@ -750,10 +752,10 @@ body {
 }
 
 .homepage .simplespacer {
-  aspect-ratio: 1451 / 101;
   width: 100%;
-  background-repeat: no-repeat;
+  aspect-ratio: 1451 / 101;
   background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
 }
 
@@ -763,7 +765,6 @@ body {
 }
 
 .homepage .register-section {
-  background-color: #B37A4C;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -777,13 +778,14 @@ body {
   font-family: 'Futura Bold';
   font-style: 'normal';
   font-weight: 700;
+  background-color: #B37A4C;
 }
 
 .homepage .register-section .prompt {
-  font-size: 160px;
-  font-family: 'Futura Bold Italic';
-  color: var(--text-color);
   margin-bottom: 7vh;
+  font-family: 'Futura Bold Italic';
+  font-size: 160px;
+  color: var(--text-color);
 }
 
 @media screen and (max-width: 768px) {
@@ -793,13 +795,13 @@ body {
 }
 
 .homepage .register-section .datetime {
+  max-width: 100vw;
+  font-family: 'Futura Demi';
   font-size: 115px;
   color: var(--bg-color);
-  text-align: center;
   line-height: 1.1;
-  font-family: 'Futura Demi';
-  max-width: 100vw;
   overflow-x: visible;
+  text-align: center;
 }
 
 @media screen and (max-width: 768px) {
@@ -809,10 +811,10 @@ body {
 }
 
 .homepage .register-section .datetime span {
-  font-size: 130px;
   position: relative;
   top: 0.5vh;
   font-family: 'Futura Bold';
+  font-size: 130px;
 }
 
 @media screen and (max-width: 768px) {
@@ -852,8 +854,8 @@ body {
 }
 
 .homepage .register-section .svg-container svg {
+  width: calc(50vw - 422px);
   max-width: 30vw;
-  width: calc(50vw -  422px);
 }
 
 .homepage .register-section #triangle-1 {
@@ -891,7 +893,11 @@ body {
 }
 
 .homepage .register-section .register-container button {
+  height: auto;
+  width: clamp(200px, 40vw, 800px);
   margin: 5vh 3.5vw !important;
+  margin: 6.5482vw 0px 2.688vw 0px;
+  padding: 1.7026vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -904,10 +910,6 @@ body {
   background-color: #08162C;
   border: 0;
   border-radius: 200px;
-  height: auto;
-  width: clamp(200px, 40vw, 800px);
-  margin: 6.5482vw 0px 2.688vw 0px;
-  padding: 1.7026vw;
 }
 
 .homepage .register-section .register-container button span {
@@ -927,8 +929,8 @@ body {
 
 .speakerspage .display-1 {
   font-family: 'Futura Bold';
-  color: var(--text-color);
   font-size: clamp(100px, calc(1.625rem + 4.5vw), 1000px);
+  color: var(--text-color);
 }
 
 @media screen and (min-width: 1200px) {
@@ -950,13 +952,13 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -1015,14 +1017,14 @@ body {
 
 @media screen and (max-width: 992px) {
   .speakerspage .container .centered-element h2 {
-    text-align: center;
+    margin-left: 0 !important;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
     -ms-grid-column-align: center;
         justify-self: center;
     font-size: 60px;
-    margin-left: 0 !important;
+    text-align: center;
   }
 }
 
@@ -1030,13 +1032,13 @@ body {
   .speakerspage .container .centered-element h2 {
     margin: 0 !important;
     padding: 0 !important;
-    text-align: center;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
     -ms-grid-column-align: center;
         justify-self: center;
     font-size: 70px;
+    text-align: center;
   }
 }
 
@@ -1059,17 +1061,17 @@ body {
 }
 
 .prismpage .content .title {
+  right: 5px;
   font-family: 'Futura Demi Italic', sans-serif;
+  font-size: clamp(80px, 8vw, 150px);
   font-style: italic;
   font-weight: 600;
-  font-size: clamp(80px, 8vw, 150px);
   line-height: 0.85;
   color: var(--em1-color);
   text-align: center;
   text-shadow: 10px 10px 4px #12503B;
   overflow: hidden;
   overflow-wrap: break-word;
-  right: 5px;
 }
 
 @media screen and (min-width: 768px) {
@@ -1079,15 +1081,15 @@ body {
 }
 
 .prismpage .content img {
-  width: 33vw;
   height: 100%;
+  width: 33vw;
 }
 
 .prismpage p {
-  font-family: 'Futura Medium';
-  font-size: 22px;
   padding-right: 5%;
   padding-left: 5%;
+  font-family: 'Futura Medium';
+  font-size: 22px;
 }
 
 .registerpage {
