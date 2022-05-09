@@ -636,14 +636,13 @@ body {
 }
 
 .homepage .speaker-cards .speaker-card {
-  height: 527px;
+  aspect-ratio: 5 / 6;
   width: 45vw;
   margin: 5vh 5vw;
 }
 
 @media screen and (max-width: 992px) {
   .homepage .speaker-cards .speaker-card {
-    height: 727px;
     width: calc(90% - clamp(30px, 10vw, 1000px));
   }
 }
@@ -695,7 +694,6 @@ body {
   width: 67%;
   border: 2px var(--em4-color) solid;
   border-radius: 50%;
-  margin-top: 1vh;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -711,7 +709,7 @@ body {
 
 .homepage .speaker-cards .speaker-card .speaker-card-inner .front p {
   padding: 0px 4%;
-  margin-top: -1vh;
+  margin-top: -2vh;
   font-size: 22px;
   text-align: center;
 }

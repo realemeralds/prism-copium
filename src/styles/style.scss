@@ -670,11 +670,10 @@ $lg: 992px;
         }
 
         .speaker-card {
-            height: 527px;
+            aspect-ratio: 5 / 6;
             width: 45vw;
 
             @media screen and (max-width: 992px) {
-                height: 727px;
                 width: calc(90% - clamp(30px, 10vw, 1000px));
             }
 
