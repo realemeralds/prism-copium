@@ -923,10 +923,13 @@ $lg: 992px;
                     display: flex;
                     align-items: center;
 
-                    p {
+                    a {
                         height: clamp(30px, 15.47169vw, 123px);
+
                         font-size: clamp(30px, 8.26vw, 85px);
                         line-height: clamp(30px, 15.47169vw, 123px);
+
+                        text-decoration: none;
                     }
                 }
             }
