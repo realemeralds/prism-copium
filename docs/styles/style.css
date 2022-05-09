@@ -691,16 +691,17 @@ body {
 }
 
 .homepage .speaker-cards .speaker-card .speaker-card-inner .front img {
-  width: 67%;
+  width: 60%;
   border: 2px var(--em4-color) solid;
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
+  margin-top: 4vh;
 }
 
 .homepage .speaker-cards .speaker-card .speaker-card-inner .front h2 {
   height: 63px;
-  margin-top: 2vh;
+  margin-top: 1vh;
   font-size: 60px;
   font-weight: 400;
   line-height: 63px;
@@ -709,9 +710,10 @@ body {
 
 .homepage .speaker-cards .speaker-card .speaker-card-inner .front p {
   padding: 0px 4%;
-  margin-top: -2vh;
+  margin-top: 1vh;
   font-size: 22px;
   text-align: center;
+  margin-bottom: 4vh;
 }
 
 .homepage .speaker-cards .speaker-card .speaker-card-inner .back {
