@@ -696,7 +696,7 @@ body {
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
-  margin-top: 15px;
+  margin-top: 3vh;
 }
 
 .homepage .speaker-cards .speaker-card .speaker-card-inner .front h2 {
@@ -710,7 +710,7 @@ body {
 
 .homepage .speaker-cards .speaker-card .speaker-card-inner .front p {
   padding: 0px 4%;
-  margin-top: -1vh;
+  margin-top: 0.5vh;
   font-size: 22px;
   text-align: center;
   margin-bottom: 2vh;
