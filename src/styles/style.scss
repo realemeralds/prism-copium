@@ -674,6 +674,7 @@ $lg: 992px;
             width: 45vw;
 
             @media screen and (max-width: 992px) {
+                height: 727px;
                 width: calc(90% - clamp(30px, 10vw, 1000px));
             }
 
