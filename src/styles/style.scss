@@ -46,6 +46,8 @@
 
 // variables
 $lg: 992px;
+$md: 768px;
+$sm: 564px;
 
 // new colour scheme
 :root {
@@ -334,7 +336,6 @@ $lg: 992px;
                         font-size: 14vw;
                         z-index: 2;
                         width: min-content;
-                        padding-right: calc(15px + 0.5em);
                         white-space: pre;
                     }
 
@@ -385,13 +386,13 @@ $lg: 992px;
             margin-left: 0;
 
             h1 {
-                padding-right: 0;
+                padding: 0 12px;
 
                 font-family: 'Futura Bold';
                 font-size: 90px;
 
-                @media screen and (max-width: 768px) {
-                    font-size: 60px;
+                @media screen and (max-width: 992px) {
+                    font-size: clamp(56px, 9vw, 90px);
                 }
 
                 color: var(--old-bg-color);
@@ -403,9 +404,13 @@ $lg: 992px;
 
             h2 {
                 padding-right: 0;
+                padding-left: 0;
 
                 font-family: 'Futura Bold';
                 font-size: 80px;
+                @media screen and (max-width: 992px) {
+                    font-size: clamp(50px, 8vw, 80px);
+                }
 
                 color: var(--em4-color);
                 text-align: center;
@@ -420,12 +425,14 @@ $lg: 992px;
             top: 7.5%;
             left: 0;
             width: calc(100% - 0.5em);
-
             z-index: 90;
+            @media screen and (max-width: 668px) {
+                display: none;
+            }
         }
 
         .row-1 {
-            padding: 5vh 3vw 5vh 6vw;
+            padding: 5vh 3vw 5vh 3vw;
 
             @media screen and (max-width: 768px) {
                 margin-left: 0;
@@ -449,6 +456,7 @@ $lg: 992px;
 
             .column-1 {
                 padding: 0;
+                padding-left: 3vw;
 
                 .card {
                     margin-right: 26px;
@@ -518,13 +526,23 @@ $lg: 992px;
 
             justify-content: space-between;
 
-            .column-3 {
-                padding: 7vh 2vw 5vh 5.3764367vw;
+            .column-3 { // these margins have caused me immeasurable pain
+                padding: 7vh 2vw 0 5.3764367vw;
 
                 z-index: 991;
 
                 @media screen and (max-width: $lg) {
-                    padding: 2vw 5vh 5.3764367vw;
+                    padding: 4vh 2vw 16px 5.3764367vw;
+                    margin: -7vh 0 0 0;
+                }
+
+                @media screen and (max-width: $md) {
+                    padding: 6vh 2vw 16px 5.3764367vw;
+                    margin: -7vh 0 0 0;
+                }
+
+                @media screen and (max-width: $sm) {
+                    padding: 6vh 2vw 14px 5.3764367vw;
                     margin: -7vh 0 0 0;
                 }
 
@@ -534,7 +552,7 @@ $lg: 992px;
                     }
 
                     li {
-                        margin: 10px 0;
+                        margin: 15px 0;
 
                         font-family: 'Futura Medium';
                         font-size: 40px;
@@ -543,7 +561,15 @@ $lg: 992px;
                         text-align: start;
 
                         @media screen and (max-width: $lg) {
-                            margin: 7vh 0;
+                            margin: 4vh 0;
+
+                            font-size: 30px;
+
+                            list-style-type: none;
+                            text-align: center;
+                        }
+                        @media screen and (max-width: 768px) {
+                            margin: 2vh 0;
 
                             font-size: 30px;
 
@@ -586,8 +612,10 @@ $lg: 992px;
             top: 55%;
             left: 0;
             width: calc(100% - 0.5em);
-
             z-index: 1;
+            @media screen and (max-width: $md) {
+                display:none;
+            }
         }
 
         .row-3 {
@@ -612,7 +640,7 @@ $lg: 992px;
 
                 p {
                     @media screen and (min-width: $lg) {
-                        margin-top: 10%;
+                        margin-top: 2%;
 
                         font-size: clamp(40px, 2.2vw, 150px);
                     }
@@ -646,27 +674,33 @@ $lg: 992px;
     .speaker-cards {
         font-family: 'Futura Demi';
         font-style: normal;
+        margin-top: 35px;
 
         h1 {
-            height: 141px;
-
             font-size: 110px;
+            @media screen and (max-width: 992px) {
+                font-size: clamp(85px, 11vw, 110px);
+            }
             font-weight: 700;
-            line-height: 141px;
+            line-height: 141/110;
 
             color: #215E4A;
 
-            text-shadow: 5px 0px 4px #000000;
+            text-shadow: 5px 2px 4px rgba(0, 0, 0, 1)
         }
 
         h6 {
-            height: 46px;
-
             font-size: 36px;
-            font-weight: 400;
-            line-height: 46px;
-
+            font-weight: 350;
+            line-height: 46/36;
             color: #08162C;
+            text-align: center;
+            @media screen and (max-width: $md) {
+                font-size: 26px;
+            }
+            @media screen and (max-width: $sm) {
+                font-size: 22px;
+            }
         }
 
         .speaker-card {
@@ -784,16 +818,15 @@ $lg: 992px;
 
     .simplespacer {
         width: 100%;
+        position: relative;
         aspect-ratio: 1451 / 101;
+        z-index: 80 !important;
+        margin-top: -5vh;
 
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-    }
-
-    .layer2 {
         background-image: url(../assets/simple-waves.svg);
-        margin-top: -5vh;
     }
 
     // register
