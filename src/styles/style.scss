@@ -703,10 +703,24 @@ $sm: 564px;
             }
         }
 
+        // ensure correct prompt based on device
+        .desktop-prompt {
+            @media screen and (max-width: 599.9px) {
+                display: none
+            }
+        }            
+        .mobile-prompt {
+            @media screen and (min-width: 600px) {
+                display: none
+            }
+        }            
+
+        .cards-container {
+            margin-top: -1.5vh;
+        }
         .speaker-card {
             aspect-ratio: 5 / 6;
             width: 45vw;
-
             @media screen and (max-width: 992px) {
                 width: calc(90% - clamp(30px, 10vw, 1000px));
             }
@@ -716,6 +730,7 @@ $sm: 564px;
             &:hover .speaker-card-inner {
                 transform: rotateY(180deg);
             }
+
 
             .speaker-card-inner {
                 position: relative;
@@ -755,38 +770,46 @@ $sm: 564px;
                     }
 
                     h2 {
-                        height: 63px;
-                        margin-top: 2vh;
-
-                        font-size: 60px;
+                        margin-top: 15px;
                         font-weight: 400;
-                        line-height: 63px;
-
+                        line-height: 63/60px;
                         text-align: center;
+                        
+                        font-size: clamp(40px, 6.2vw, 90px);
+                        @media screen and (max-width: $lg) {
+                            font-size: clamp(40px, 12vw, 150px);
+                        }
+                        @media screen and (max-width: $sm) {
+                            margin: 12px 0;
+                        }
                     }
 
                     p {
                         padding: 0px 4%;
-                        margin-top: -2vh;
-
-                        font-size: 22px;
-
+                        margin-top: -16px;
+                        font-size: clamp(22px, 1.8vw, 150px);
                         text-align: center;
+                        @media screen and (max-width: $lg) {
+                            font-size: clamp(12px, 4vw, 75px);
+                        }
                     }
                 }
 
                 .back {
-                    padding: 0 3%;
-
+                    padding: 0 4%;
                     justify-content: start;
-
                     transform: rotateY(180deg);
+                    justify-content: flex-start;
 
                     ul {
                         margin-top: 11%;
+                        margin-bottom: 0;
 
                         li {
-                            font-size: 24px;
+                            font-size: clamp(33px, 2.1vw, 225px);
+                            @media screen and (max-width: $lg) {
+                            font-size: clamp(12px, 4.5vw, 125px);
+                            }
                         }
                     }
 
@@ -797,16 +820,20 @@ $sm: 564px;
 
                     h5 {
                         margin-top: 5%;
-
                         font-weight: 400;
-                        font-size: 50px;
                         line-height: 1.2;
                         color: #08162C;
+
+                        font-size: clamp(40px, 5.5vw, 80px);
+                        @media screen and (max-width: $lg) {
+                            font-size: clamp(30px, 9vw, 150px);
+                        }
+                        
                     }
 
                     p {
                         font-family: 'Futura Medium';
-                        font-size: 32px;
+                        font-size: clamp(20px, 6vw, 100px);
                         line-height: 1;
 
                         color: #08162C;

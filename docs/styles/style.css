@@ -695,6 +695,22 @@ body {
   }
 }
 
+@media screen and (max-width: 599.9px) {
+  .homepage .speaker-cards .desktop-prompt {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .homepage .speaker-cards .mobile-prompt {
+    display: none;
+  }
+}
+
+.homepage .speaker-cards .cards-container {
+  margin-top: -1.5vh;
+}
+
 .homepage .speaker-cards .speaker-card {
   aspect-ratio: 5 / 6;
   width: 45vw;
@@ -759,36 +775,61 @@ body {
 }
 
 .homepage .speaker-cards .speaker-card .speaker-card-inner .front h2 {
-  height: 63px;
-  margin-top: 2vh;
-  font-size: 60px;
+  margin-top: 15px;
   font-weight: 400;
-  line-height: 63px;
+  line-height: 63/60px;
   text-align: center;
+  font-size: clamp(40px, 6.2vw, 90px);
+}
+
+@media screen and (max-width: 992px) {
+  .homepage .speaker-cards .speaker-card .speaker-card-inner .front h2 {
+    font-size: clamp(40px, 12vw, 150px);
+  }
+}
+
+@media screen and (max-width: 564px) {
+  .homepage .speaker-cards .speaker-card .speaker-card-inner .front h2 {
+    margin: 12px 0;
+  }
 }
 
 .homepage .speaker-cards .speaker-card .speaker-card-inner .front p {
   padding: 0px 4%;
-  margin-top: -2vh;
-  font-size: 22px;
+  margin-top: -16px;
+  font-size: clamp(22px, 1.8vw, 150px);
   text-align: center;
 }
 
+@media screen and (max-width: 992px) {
+  .homepage .speaker-cards .speaker-card .speaker-card-inner .front p {
+    font-size: clamp(12px, 4vw, 75px);
+  }
+}
+
 .homepage .speaker-cards .speaker-card .speaker-card-inner .back {
-  padding: 0 3%;
+  padding: 0 4%;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
+  justify-content: flex-start;
 }
 
 .homepage .speaker-cards .speaker-card .speaker-card-inner .back ul {
   margin-top: 11%;
+  margin-bottom: 0;
 }
 
 .homepage .speaker-cards .speaker-card .speaker-card-inner .back ul li {
-  font-size: 24px;
+  font-size: clamp(33px, 2.1vw, 225px);
+}
+
+@media screen and (max-width: 992px) {
+  .homepage .speaker-cards .speaker-card .speaker-card-inner .back ul li {
+    font-size: clamp(12px, 4.5vw, 125px);
+  }
 }
 
 .homepage .speaker-cards .speaker-card .speaker-card-inner .back h5,
@@ -799,14 +840,20 @@ body {
 .homepage .speaker-cards .speaker-card .speaker-card-inner .back h5 {
   margin-top: 5%;
   font-weight: 400;
-  font-size: 50px;
   line-height: 1.2;
   color: #08162C;
+  font-size: clamp(40px, 5.5vw, 80px);
+}
+
+@media screen and (max-width: 992px) {
+  .homepage .speaker-cards .speaker-card .speaker-card-inner .back h5 {
+    font-size: clamp(30px, 9vw, 150px);
+  }
 }
 
 .homepage .speaker-cards .speaker-card .speaker-card-inner .back p {
   font-family: 'Futura Medium';
-  font-size: 32px;
+  font-size: clamp(20px, 6vw, 100px);
   line-height: 1;
   color: #08162C;
 }
