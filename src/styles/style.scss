@@ -840,7 +840,7 @@ $sm: 564px;
                         line-height: 1.2;
                         color: #08162C;
 
-                        font-size: clamp(40px, 5.5vw, 80px);
+                        font-size: clamp(40px, 5vw, 120px);
                         @media screen and (max-width: $lg) {
                             font-size: clamp(30px, 9vw, 150px);
                         }
@@ -849,7 +849,7 @@ $sm: 564px;
 
                     p {
                         font-family: 'Futura Medium';
-                        font-size: clamp(20px, 6vw, 100px);
+                        font-size: clamp(20px, 3vw, 70px);
                         line-height: 1;
 
                         color: #08162C;
