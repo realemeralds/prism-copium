@@ -218,12 +218,24 @@ body {
   left: 0;
 }
 
+@media screen and (max-width: 768px) {
+  .homepage .hero #line1 {
+    display: none;
+  }
+}
+
 .homepage .hero #line2 {
   position: absolute;
   top: 28.365%;
   left: 0;
   width: calc(100% - 0.5em);
   z-index: 60;
+}
+
+@media screen and (max-width: 768px) {
+  .homepage .hero #line2 {
+    display: none;
+  }
 }
 
 .homepage .hero #title {
@@ -386,7 +398,7 @@ body {
 
 @media screen and (max-width: 992px) {
   .homepage .about-catalyst .row h1 {
-    font-size: clamp(56px, 9vw, 90px);
+    font-size: clamp(50px, 8vw, 80px);
   }
 }
 
@@ -403,7 +415,7 @@ body {
 
 @media screen and (max-width: 992px) {
   .homepage .about-catalyst .row h2 {
-    font-size: clamp(50px, 8vw, 80px);
+    font-size: clamp(46px, 7vw, 70px);
   }
 }
 
@@ -511,6 +523,12 @@ body {
   line-height: 1.3;
 }
 
+@media screen and (max-width: 768px) {
+  .homepage .about-catalyst .row-1 .column-2 p {
+    font-size: 24px;
+  }
+}
+
 .homepage .about-catalyst .row-2 {
   margin-left: 0;
   -webkit-box-pack: justify;
@@ -525,21 +543,21 @@ body {
 
 @media screen and (max-width: 992px) {
   .homepage .about-catalyst .row-2 .column-3 {
-    padding: 4vh 2vw 16px 5.3764367vw;
+    padding: 4vh 4vw 16px 4vw;
     margin: -7vh 0 0 0;
   }
 }
 
 @media screen and (max-width: 768px) {
   .homepage .about-catalyst .row-2 .column-3 {
-    padding: 6vh 2vw 16px 5.3764367vw;
+    padding: 6vh 4vw 16px 4vw;
     margin: -7vh 0 0 0;
   }
 }
 
 @media screen and (max-width: 564px) {
   .homepage .about-catalyst .row-2 .column-3 {
-    padding: 6vh 2vw 14px 5.3764367vw;
+    padding: 6vh 4vw 14px 4vw;
     margin: -7vh 0 0 0;
   }
 }
@@ -570,7 +588,7 @@ body {
 @media screen and (max-width: 768px) {
   .homepage .about-catalyst .row-2 .column-3 ul li {
     margin: 2vh 0;
-    font-size: 30px;
+    font-size: 24px;
     list-style-type: none;
     text-align: center;
   }
@@ -582,6 +600,12 @@ body {
     font-size: 30px;
     list-style-type: none;
     text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .homepage .about-catalyst .row-2 .column-3 ul li:nth-child(3) {
+    font-size: 24px;
   }
 }
 
@@ -637,6 +661,12 @@ body {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .homepage .about-catalyst .row-3 .column-5 p {
+    font-size: 24px;
+  }
+}
+
 .homepage .about-catalyst .row-3 .column-6 {
   max-width: 35vw;
   margin: 0 2.5vw 0 0vw;
@@ -671,7 +701,7 @@ body {
 
 @media screen and (max-width: 992px) {
   .homepage .speaker-cards h1 {
-    font-size: clamp(85px, 11vw, 110px);
+    font-size: clamp(70px, 11vw, 110px);
   }
 }
 
@@ -779,6 +809,7 @@ body {
   font-weight: 400;
   line-height: 63/60px;
   text-align: center;
+  padding: 0 6px;
   font-size: clamp(40px, 6.2vw, 90px);
 }
 
@@ -912,7 +943,7 @@ body {
 
 @media screen and (max-width: 768px) {
   .homepage .register-section .datetime {
-    font-size: clamp(30px, calc(8vw + 20px), 60px);
+    font-size: clamp(30px, calc(6vw + 20px), 60px);
   }
 }
 
