@@ -621,16 +621,17 @@ $sm: 564px;
 
         #line4 {
             position: absolute !important;
-            top: 55%;
+            top: 50%;
             left: 0;
             width: calc(100% - 0.5em);
-            z-index: 1;
+            z-index: 1 !important;
             @media screen and (max-width: $md) {
                 display:none;
             }
         }
 
         .row-3 {
+            z-index: 991;
             .column-5 {
                 margin-left: 4vw;
 
@@ -641,8 +642,6 @@ $sm: 564px;
                 color: var(--text-color);
                 text-align: center;
 
-                z-index: 991;
-
                 @media screen and (max-width: $lg) {
                     margin: 0 1vw;
 
@@ -651,6 +650,7 @@ $sm: 564px;
                 }
 
                 p {
+                    position: relative; 
                     @media screen and (min-width: $lg) {
                         margin-top: 2%;
 
