@@ -317,7 +317,6 @@ body {
     width: -webkit-min-content;
     width: -moz-min-content;
     width: min-content;
-    padding-right: calc(15px + 0.5em);
     white-space: pre;
   }
 }
@@ -376,7 +375,7 @@ body {
 }
 
 .homepage .about-catalyst .row h1 {
-  padding-right: 0;
+  padding: 0 12px;
   font-family: 'Futura Bold';
   font-size: 90px;
   color: var(--old-bg-color);
@@ -385,20 +384,27 @@ body {
   z-index: 100;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   .homepage .about-catalyst .row h1 {
-    font-size: 60px;
+    font-size: clamp(56px, 9vw, 90px);
   }
 }
 
 .homepage .about-catalyst .row h2 {
   padding-right: 0;
+  padding-left: 0;
   font-family: 'Futura Bold';
   font-size: 80px;
   color: var(--em4-color);
   text-align: center;
   text-shadow: 5px 2px 4px rgba(0, 0, 0, 0.25);
   z-index: 991;
+}
+
+@media screen and (max-width: 992px) {
+  .homepage .about-catalyst .row h2 {
+    font-size: clamp(50px, 8vw, 80px);
+  }
 }
 
 .homepage .about-catalyst #line3 {
@@ -409,8 +415,14 @@ body {
   z-index: 90;
 }
 
+@media screen and (max-width: 668px) {
+  .homepage .about-catalyst #line3 {
+    display: none;
+  }
+}
+
 .homepage .about-catalyst .row-1 {
-  padding: 5vh 3vw 5vh 6vw;
+  padding: 5vh 3vw 5vh 3vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -442,6 +454,7 @@ body {
 
 .homepage .about-catalyst .row-1 .column-1 {
   padding: 0;
+  padding-left: 3vw;
 }
 
 .homepage .about-catalyst .row-1 .column-1 .card {
@@ -506,13 +519,27 @@ body {
 }
 
 .homepage .about-catalyst .row-2 .column-3 {
-  padding: 7vh 2vw 5vh 5.3764367vw;
+  padding: 7vh 2vw 0 5.3764367vw;
   z-index: 991;
 }
 
 @media screen and (max-width: 992px) {
   .homepage .about-catalyst .row-2 .column-3 {
-    padding: 2vw 5vh 5.3764367vw;
+    padding: 4vh 2vw 16px 5.3764367vw;
+    margin: -7vh 0 0 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .homepage .about-catalyst .row-2 .column-3 {
+    padding: 6vh 2vw 16px 5.3764367vw;
+    margin: -7vh 0 0 0;
+  }
+}
+
+@media screen and (max-width: 564px) {
+  .homepage .about-catalyst .row-2 .column-3 {
+    padding: 6vh 2vw 14px 5.3764367vw;
     margin: -7vh 0 0 0;
   }
 }
@@ -524,7 +551,7 @@ body {
 }
 
 .homepage .about-catalyst .row-2 .column-3 ul li {
-  margin: 10px 0;
+  margin: 15px 0;
   font-family: 'Futura Medium';
   font-size: 40px;
   line-height: 1.3;
@@ -533,7 +560,16 @@ body {
 
 @media screen and (max-width: 992px) {
   .homepage .about-catalyst .row-2 .column-3 ul li {
-    margin: 7vh 0;
+    margin: 4vh 0;
+    font-size: 30px;
+    list-style-type: none;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .homepage .about-catalyst .row-2 .column-3 ul li {
+    margin: 2vh 0;
     font-size: 30px;
     list-style-type: none;
     text-align: center;
@@ -570,6 +606,12 @@ body {
   z-index: 1;
 }
 
+@media screen and (max-width: 768px) {
+  .homepage .about-catalyst #line4 {
+    display: none;
+  }
+}
+
 .homepage .about-catalyst .row-3 .column-5 {
   margin-left: 4vw;
   font-family: 'Futura Medium';
@@ -590,7 +632,7 @@ body {
 
 @media screen and (min-width: 992px) {
   .homepage .about-catalyst .row-3 .column-5 p {
-    margin-top: 10%;
+    margin-top: 2%;
     font-size: clamp(40px, 2.2vw, 150px);
   }
 }
@@ -616,23 +658,41 @@ body {
 .homepage .speaker-cards {
   font-family: 'Futura Demi';
   font-style: normal;
+  margin-top: 35px;
 }
 
 .homepage .speaker-cards h1 {
-  height: 141px;
   font-size: 110px;
   font-weight: 700;
-  line-height: 141px;
+  line-height: 141/110;
   color: #215E4A;
-  text-shadow: 5px 0px 4px #000000;
+  text-shadow: 5px 2px 4px black;
+}
+
+@media screen and (max-width: 992px) {
+  .homepage .speaker-cards h1 {
+    font-size: clamp(85px, 11vw, 110px);
+  }
 }
 
 .homepage .speaker-cards h6 {
-  height: 46px;
   font-size: 36px;
-  font-weight: 400;
-  line-height: 46px;
+  font-weight: 350;
+  line-height: 46/36;
   color: #08162C;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .homepage .speaker-cards h6 {
+    font-size: 26px;
+  }
+}
+
+@media screen and (max-width: 564px) {
+  .homepage .speaker-cards h6 {
+    font-size: 22px;
+  }
 }
 
 .homepage .speaker-cards .speaker-card {
@@ -753,15 +813,14 @@ body {
 
 .homepage .simplespacer {
   width: 100%;
+  position: relative;
   aspect-ratio: 1451 / 101;
+  z-index: 80 !important;
+  margin-top: -5vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.homepage .layer2 {
   background-image: url(../assets/simple-waves.svg);
-  margin-top: -5vh;
 }
 
 .homepage .register-section {
