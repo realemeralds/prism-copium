@@ -48,7 +48,6 @@
 $lg: 992px;
 $md: 768px;
 $sm: 564px;
-$x-sm: 343px
 
 // new colour scheme
 :root {
@@ -122,11 +121,8 @@ $x-sm: 343px
             // navbar logo
             font-family: 'Futura Bold Italic', sans-serif;
             font-size: 40px;
-            margin: 0 !important;
+
             color: var(--em1-color);
-            @media screen and (max-width: $x-sm) {
-                font-size: 34px;
-            }
         }
 
         .nav-link {
@@ -151,7 +147,7 @@ $x-sm: 343px
         .navbar-toggler {
             border: 0px solid white !important;
             box-shadow: 0 0 0 0.25rem var(--text) !important;
-            padding: 0.25rem 0.5rem .25rem 5px;
+
             span {
                 position: relative;
                 padding: 22px 25px 25px 25px;
@@ -705,7 +701,7 @@ $x-sm: 343px
 
             color: #215E4A;
 
-            text-shadow:5px 3px 2px rgba(109, 107, 107, 0.4)
+            text-shadow: 5px 2px 4px rgba(0, 0, 0, 1)
         }
 
         h6 {
@@ -848,14 +844,10 @@ $x-sm: 343px
                         font-weight: 400;
                         line-height: 1.2;
                         color: #08162C;
-                        margin-bottom: 2px;
 
                         font-size: clamp(40px, 5vw, 120px);
                         @media screen and (max-width: $lg) {
                             font-size: clamp(30px, 9vw, 150px);
-                        }
-                        @media screen and (max-width: $x-sm) {
-                            display: none;
                         }
                         
                     }
@@ -864,6 +856,7 @@ $x-sm: 343px
                         font-family: 'Futura Medium';
                         font-size: clamp(20px, 3vw, 70px);
                         line-height: 1;
+
                         color: #08162C;
                     }
                 }
@@ -1028,9 +1021,9 @@ $x-sm: 343px
 .speakerspage {
     .display-1 {
         font-family: 'Futura Bold';
-        font-size: clamp(60px, calc(14vw + 20px), 1000px);
+        font-size: clamp(100px, calc(1.625rem + 4.5vw), 1000px);
 
-        @media screen and (min-width: $lg) {
+        @media screen and (min-width: 1200px) {
             font-size: 110px !important
         }
 
@@ -1082,7 +1075,7 @@ $x-sm: 343px
             margin-top: 4rem !important;
 
             @media screen and (max-width: 768px) {
-                margin-top: .5vh !important;
+                margin-top: 2rem !important
             }
         }
 
@@ -1107,13 +1100,13 @@ $x-sm: 343px
                 }
 
                 @media screen and (max-width: 768px) {
-                    margin: 0 -15px !important;
+                    margin: 0 !important;
                     padding: 0 !important;
 
                     align-self: center;
                     justify-self: center;
 
-                    font-size: clamp(40px, calc(8vw + 10px), 75px);
+                    font-size: 70px;
 
                     text-align: center;
                 }
@@ -1132,16 +1125,6 @@ $x-sm: 343px
 
             p {
                 line-height: 1.3;
-                @media screen and (max-width: $sm) {
-                    margin: 0 -15px !important;
-                    padding: 0 !important;
-
-                    align-self: center;
-                    justify-self: center;
-
-                    font-size: clamp(50px, calc(10vw), 75px);
-                    text-align: center;
-                }
             }
         }
     }
@@ -1185,10 +1168,9 @@ $x-sm: 343px
         padding-right: 5%;
         padding-left: 5%;
 
-        font-family: "Futura Demi";
+        font-family: 'Futura Medium';
         font-size: 22px;
     }
-
 }
 
 .registerpage {
