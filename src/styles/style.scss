@@ -48,7 +48,7 @@
 $lg: 992px;
 $md: 768px;
 $sm: 564px;
-$x-sm: 343px
+$x-sm: 343px;
 
 // new colour scheme
 :root {
@@ -134,7 +134,7 @@ $x-sm: 343px
             margin: 0px 2.5%;
 
             font-family: "adelica brush";
-            font-size: 22px;
+            font-size: 17px;
 
             color: var(--text-color);
         }
@@ -146,6 +146,10 @@ $x-sm: 343px
 
             background-color: var(--em2-color);
             border-radius: 10px;
+
+            a {
+                font-size: 20px;
+            }
         }
 
         .navbar-toggler {
