@@ -9,6 +9,6 @@ Catalyst 2022 webpage: https://www.sjicatalyst2022.com/
 * Bootstrap
 
 #### Stats:
-2600 lines of code
-8 contributors (only 3 on github)
-Over 80 man-hours
+* 2600 lines of code
+* 8 contributors (only 3 on github)
+* Over 80 man-hours
