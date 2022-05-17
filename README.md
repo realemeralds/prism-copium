@@ -1,6 +1,14 @@
-# prism-copium
-Catalyst 2022 webpage: https://realemeralds.github.io/prism-copium/index.html
+# Catalyst Project 2022
+Based on a client's proposal, we designed a website, learning all relavant technologies in less than a month, and deploying it to a custom domain.
 
-## Notes
-- Edit html and javascript files directly in `/docs`
-- Edit css files in `src/styles`, compile to `docs/styles`
+Catalyst 2022 webpage: https://www.sjicatalyst2022.com/
+
+### Technologies used:
+* Raw HTML, and JS
+* SASS
+* Bootstrap
+
+#### Stats:
+2600 lines of code
+8 contributors (only 3 on github)
+Over 80 man-hours
