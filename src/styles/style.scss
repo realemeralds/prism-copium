@@ -131,10 +131,11 @@ $x-sm: 343px;
 
         .nav-link {
             // class on all links on navbar
-            margin: 0px 1%;
+            margin: 0px 1.22rem;
+            padding: 0;
 
             font-family: "adelica brush";
-            font-size: 17px;
+            font-size: 19px;
 
             color: var(--text-color);
         }
@@ -146,9 +147,12 @@ $x-sm: 343px;
 
             background-color: var(--em2-color);
             border-radius: 10px;
+            margin-left: 1.2rem;
 
             a {
-                font-size: 20px;
+                font-size: 22px;
+                margin: 0 1%;
+                padding: inherit;
             }
         }
 
