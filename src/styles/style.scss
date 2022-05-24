@@ -45,10 +45,12 @@
 }
 
 // variables
-$lg: 992px;
-$md: 768px;
-$sm: 564px;
 $x-sm: 343px;
+$sm: 564px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
 
 // new colour scheme
 :root {
@@ -135,9 +137,13 @@ $x-sm: 343px;
             padding: 0;
 
             font-family: "adelica brush";
-            font-size: 19px;
-
+            font-size: 20px;
+            @media screen and (max-width: 1090px) {
+                font-size: 15px;
+            }
+            
             color: var(--text-color);
+            
         }
 
         .register {
@@ -285,7 +291,7 @@ $x-sm: 343px;
 
             z-index: 990;
 
-            @media (max-width: 992px) {
+            @media (max-width: $lg) {
                 width: 85.569vw !important;
                 margin: 0 7vw;
 
@@ -293,7 +299,7 @@ $x-sm: 343px;
             }
 
             .container-fluid {
-                @media (max-width: 992px) {
+                @media (max-width: $lg) {
                     width: 85.569vw !important;
 
                     justify-content: center;
@@ -311,7 +317,7 @@ $x-sm: 343px;
 
                     z-index: 102;
 
-                    @media (max-width: 992px) {
+                    @media (max-width: $lg) {
                         font-size: 13vw;
 
                         text-align: center;
@@ -330,7 +336,7 @@ $x-sm: 343px;
             }
 
             .container-2 {
-                @media (max-width: 992px) {
+                @media (max-width: $lg) {
                     justify-content: center;
                     width: 85.569vw !important
                 }
@@ -348,7 +354,7 @@ $x-sm: 343px;
                     right: 5px;
                     width: 52.35602vw;
 
-                    @media (max-width: 992px) {
+                    @media (max-width: $lg) {
                         text-align: center;
                         font-size: 14vw;
                         z-index: 2;
@@ -408,7 +414,7 @@ $x-sm: 343px;
                 font-family: 'Futura Bold';
                 font-size: 90px;
 
-                @media screen and (max-width: 992px) {
+                @media screen and (max-width: $lg) {
                     font-size: clamp(50px, 8vw, 80px);
                 }
 
@@ -425,7 +431,7 @@ $x-sm: 343px;
 
                 font-family: 'Futura Bold';
                 font-size: 80px;
-                @media screen and (max-width: 992px) {
+                @media screen and (max-width: $lg) {
                     font-size: clamp(46px, 7vw, 70px);
                 }
 
@@ -451,7 +457,7 @@ $x-sm: 343px;
         .row-1 {
             padding: 5vh 3vw 5vh 3vw;
 
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: $md) {
                 margin-left: 0;
             }
 
@@ -589,7 +595,7 @@ $x-sm: 343px;
                             text-align: center;
                         }
 
-                        @media screen and (max-width: 768px) {
+                        @media screen and (max-width: $md) {
                             margin: 2vh 0;
 
                             font-size: 24px;
@@ -705,7 +711,7 @@ $x-sm: 343px;
 
         h1 {
             font-size: 110px;
-            @media screen and (max-width: 992px) {
+            @media screen and (max-width: $lg) {
                 font-size: clamp(70px, 11vw, 110px);
             }
             font-weight: 700;
@@ -745,11 +751,19 @@ $x-sm: 343px;
         .cards-container {
             margin-top: -1.5vh;
         }
+
         .speaker-card {
             aspect-ratio: 5 / 6;
             width: 45vw;
-            @media screen and (max-width: 992px) {
+            @media screen and (max-width: $lg) {
                 width: calc(90% - clamp(30px, 10vw, 1000px));
+            }
+            @media screen and (min-width: $lg) and (max-width: $xl) {
+                height: 700px;
+                padding: 0px 30px;
+            }
+            @media screen and (min-width: $xl) and (max-width: $xxl) {
+                aspect-ratio: 5/8;
             }
 
             margin: 5vh 5vw;
@@ -910,7 +924,7 @@ $x-sm: 343px;
             font-family: 'Futura Bold Italic';
             font-size: 160px;
 
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: $md) {
                 font-size: clamp(30px, calc(11vw + 20px), 90px);
             }
 
@@ -923,7 +937,7 @@ $x-sm: 343px;
             font-family: 'Futura Demi';
             font-size: 115px;
 
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: $md) {
                 font-size: clamp(30px, calc(6vw + 20px), 60px);
             }
 
@@ -939,7 +953,7 @@ $x-sm: 343px;
                 font-family: 'Futura Bold';
                 font-size: 130px;
 
-                @media screen and (max-width: 768px) {
+                @media screen and (max-width: $md) {
                     font-size: clamp(30px, calc(10vw + 20px), 70px);
                 }
             }
@@ -1051,7 +1065,7 @@ $x-sm: 343px;
         font-family: 'Futura Medium';
         font-size: 22px;
 
-        @media screen and (max-width: 992px) {
+        @media screen and (max-width: $lg) {
             padding: 3vw;
             width: 100%;
 
@@ -1060,7 +1074,7 @@ $x-sm: 343px;
             align-items: center;
         }
 
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: $md) {
             margin-top: 1rem !important;
         }
 
@@ -1080,7 +1094,7 @@ $x-sm: 343px;
         p {
             line-height: 1.5;
 
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: $md) {
                 width: 85vw !important;
                 margin: 0 7.5vw;
             }
@@ -1089,7 +1103,7 @@ $x-sm: 343px;
         .mt-5 {
             margin-top: 4rem !important;
 
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: $md) {
                 margin-top: .5vh !important;
             }
         }
@@ -1098,12 +1112,12 @@ $x-sm: 343px;
         .centered-element {
             align-items: center;
 
-            @media screen and (min-width: 768px) {
+            @media screen and (min-width: $md) {
                 margin-left: 2vw;
             }
 
             h2 {
-                @media screen and (max-width: 992px) {
+                @media screen and (max-width: $lg) {
                     margin-left: 0 !important;
 
                     align-self: center;
@@ -1114,7 +1128,7 @@ $x-sm: 343px;
                     text-align: center;
                 }
 
-                @media screen and (max-width: 768px) {
+                @media screen and (max-width: $md) {
                     margin: 0 -15px !important;
                     padding: 0 !important;
 
@@ -1178,7 +1192,7 @@ $x-sm: 343px;
         }
 
         .centered-element {
-            @media screen and (min-width: 768px) {
+            @media screen and (min-width: $md) {
                 margin-left: 1vw;
             }
         }
