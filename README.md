@@ -4,11 +4,13 @@ Based on a client's proposal, we designed a website, learning all relavant techn
 Catalyst 2022 webpage: https://www.sjicatalyst2022.com/
 
 ### Technologies used:
-* Raw HTML, and JS
-* SASS
-* Bootstrap
+- HTML
+- CSS
+- SASS
+- Bootstrap
+- Javascript
 
 #### Stats:
-* 2600 lines of code
-* 8 contributors (only 3 on github)
-* Over 80 man-hours
+- 2600 lines of code
+- 8 contributors (only 3 on github)
+- Over 80 man-hours
